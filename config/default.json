@@ -1,0 +1,41 @@
+{
+    "secret":"",
+    "database":{
+
+    },
+    "manifest": {
+        "connections": [
+            {
+                "port": 8000,
+                "host": "localhost",
+                "labels": ["api"]
+            }
+        ],
+        "registrations": [
+            {
+                "plugin": "hapi-boom-jsend",
+                "options":{
+                    "select":["api"]
+                }
+            },
+            {
+                "plugin": "vision",
+                "options": {
+                    "select": ["api"]
+                }
+            },
+            {
+                "plugin": "inert",
+                "options":{
+                    "select": ["api"]
+                }
+            },
+            {
+                "plugin": "./routes",
+                "options": {
+                    "select": ["api"]
+                }
+            }
+        ]
+    }
+}
