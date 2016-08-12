@@ -9,7 +9,10 @@ const Server = require('./lib');
 // internals Declarations ==============================
 const internals = {
     options: { relativeTo: `${__dirname}/lib` }
+
+
 };
+
 
 // init the server =====================================
 Server.init(Config.manifest, internals.options,(err, server) => {
@@ -23,6 +26,6 @@ Server.init(Config.manifest, internals.options,(err, server) => {
     };
 
     // logging start server
-    console.log(`Api server starte at: ${api.info.uri}`);
+    server.log('app', `Api server starte at: ${api.info.uri}`);
 
 });
