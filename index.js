@@ -4,18 +4,15 @@
 const Hoek = require('hoek');
 const Config = require('getconfig');
 const Server = require('./lib');
-
+require('./lib/db');
 
 // internals Declarations ==============================
 const internals = {
     options: { relativeTo: `${__dirname}/lib` }
-
-
 };
 
-
 // init the server =====================================
-Server.init(Config.manifest, internals.options,(err, server) => {
+Server.init(Config.manifest, internals.options, (err, server) => {
 
     Hoek.assert(!err, err);
 
