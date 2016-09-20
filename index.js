@@ -4,7 +4,7 @@
 const Hoek = require('hoek');
 const Config = require('getconfig');
 const Server = require('./lib');
-require('./lib/db');
+const DB = require('./lib/db');
 
 // internals Declarations ==============================
 const internals = {
