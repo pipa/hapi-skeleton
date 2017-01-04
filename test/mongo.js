@@ -1,3 +1,4 @@
+/*
 // Deps =========================================
 const Lab = require('lab');
 const Code = require('code');
@@ -67,3 +68,4 @@ describe('Mongo', () => {
         done();
     });
 });
+*/

@@ -39,16 +39,16 @@ internals.config = {
     manifest: {
         connections: [
             {
-                'labels': ['api'],
-                'routes': {
-                    'cors': true
+                labels: ['api'],
+                routes: {
+                    cors: true
                 },
-                'port': {
+                port: {
                     $filter: 'env',
                     prd: 8080,
                     $default: 8085
                 },
-                'host': {
+                host: {
                     $filter: 'env',
                     prd: '127.0.0.1',
                     $default: 'localhost'
@@ -57,55 +57,156 @@ internals.config = {
         ],
         registrations: [
             {
-                'plugin': 'hapi-boom-jsend',
-                'options': {
-                    'select': ['api']
+                plugin: 'hapi-boom-jsend',
+                options: {
+                    select: ['api']
                 }
             },
             {
-                'plugin': 'vision',
-                'options': {
-                    'select': ['api']
+                plugin: 'vision',
+                options: {
+                    select: ['api']
                 }
             },
             {
-                'plugin': 'inert',
-                'options': {
-                    'select': ['api']
+                plugin: 'inert',
+                options: {
+                    select: ['api']
                 }
             },
             {
-                'plugin': {
-                    'register': 'lout',
-                    'options': {
+                plugin: {
+                    register: 'lout',
+                    options: {
                         'apiVersion': Pkg.version
+                    }
+                },
+                options: {
+                    select: ['api']
+                }
+            },
+            {
+                plugin: './plugins/routes',
+                options: {
+                    select: ['api']
+                }
+            },
+            {
+                plugin: './plugins/mailer',
+                options: {
+                    select: ['api']
+                }
+            },
+            {
+                plugin: {
+                    register: './plugins/db',
+                    options: internals.mongo
+                },
+                options: {
+                    select: ['api']
+                }
+            },
+            {
+                plugin: {
+                    register: 'good',
+                    options: {
+                        ops: {
+                            interval: 1000
+                        },
+                        reporters: {
+                            $filter: 'env',
+                            $default: {},
+                            prd: {
+                                console: [{
+                                    module: 'good-squeeze',
+                                    name: 'Squeeze',
+                                    args: [{ 'log': '*', 'request': '*', 'response': '*', 'error': '*' }]
+                                }, {
+                                    module: 'good-console'
+                                }, 'stdout'],
+                                'file-ops': [
+                                    {
+                                        module: 'good-squeeze',
+                                        name: 'Squeeze',
+                                        args: [{ 'ops': '*' }]
+                                    },
+                                    {
+                                        module: 'good-squeeze',
+                                        name: 'SafeJson'
+                                    },
+                                    {
+                                        module: 'good-file',
+                                        args: ['./logs/ops.log']
+                                    }
+                                ],
+                                'file-error': [
+                                    {
+                                        module: 'good-squeeze',
+                                        name: 'Squeeze',
+                                        args: [{ 'error': '*', 'log': 'error' }]
+                                    },
+                                    {
+                                        module: 'good-squeeze',
+                                        name: 'SafeJson'
+                                    },
+                                    {
+                                        module: 'good-file',
+                                        args: ['./logs/errors.log']
+                                    }
+                                ],
+                                'file-http': [
+                                    {
+                                        module: 'good-squeeze',
+                                        name: 'Squeeze',
+                                        args: [{ 'response': '*' }]
+                                    },
+                                    {
+                                        module: 'good-squeeze',
+                                        name: 'SafeJson'
+                                    },
+                                    {
+                                        module: 'good-file',
+                                        args: ['./logs/request.log']
+                                    }
+                                ],
+                                'file-app': [
+                                    {
+                                        module: 'good-squeeze',
+                                        name: 'Squeeze',
+                                        args: [{ 'log': 'app' }]
+                                    },
+                                    {
+                                        module: 'good-squeeze',
+                                        name: 'SafeJson'
+                                    },
+                                    {
+                                        module: 'good-file',
+                                        args: ['./logs/app.log']
+                                    }
+                                ],
+                                'file-mongo': [
+                                    {
+                                        module: 'good-squeeze',
+                                        name: 'Squeeze',
+                                        args: [{ 'log': 'mongo' }]
+                                    },
+                                    {
+                                        module: 'good-squeeze',
+                                        name: 'SafeJson'
+                                    },
+                                    {
+                                        module: 'good-file',
+                                        args: ['./logs/mongo.log']
+                                    }
+                                ]
+                            }
+                        }
                     }
                 },
                 'options': {
                     'select': ['api']
                 }
             },
-            {
-                'plugin': './plugins/routes',
-                'options': {
-                    'select': ['api']
-                }
-            },
-            {
-                'plugin': './plugins/mailer',
-                'options': {
-                    'select': ['api']
-                }
-            },
-            {
-                'plugin': {
-                    'register': './plugins/db',
-                    'options': internals.mongo
-                },
-                'options': {
-                    'select': ['api']
-                }
-            }
         ]
     }
 };

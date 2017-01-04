@@ -564,7 +564,7 @@
             <a href="#lib/model/home.js"><span class="dirname">lib/model/</span><span class="basename">home.js</span></a>
         </li>
         <li>
-            <span class="cov high">81.33</span>
+            <span class="cov high">81.08</span>
             <a href="#lib/plugins/db.js"><span class="dirname">lib/plugins/</span><span class="basename">db.js</span></a>
         </li>
         <li>
@@ -579,11 +579,11 @@
     </div>
     <div id="tests">
       <h1>Test Report</h1>
-      <div class="stats terrible">
-          <div class="failures">2</div>
+      <div class="stats high">
+          <div class="failures">0</div>
           <div class="skipped">0</div>
-          <div class="test-count">9</div>
-          <div class="duration">690</div>
+          <div class="test-count">7</div>
+          <div class="duration">767</div>
       </div>
       <div id="filters">
           <input type="checkbox" checked="" onchange="filter(this)" value="success" id="show-success">
@@ -595,8 +595,6 @@
           <label for="show-Basic_HTTP_Tests">Basic HTTP Tests</label>
           <input type="checkbox" checked="" onchange="filter(this)" value="Main" id="show-Main">
           <label for="show-Main">Main</label>
-          <input type="checkbox" checked="" onchange="filter(this)" value="Mongo" id="show-Mongo">
-          <label for="show-Mongo">Mongo</label>
       </div>
       <table>
           <thead>
@@ -612,28 +610,28 @@
               <td class="test-title">Basic HTTP Tests POST create a new record
                   
               </td>
-              <td class="test-duration">49</td>
+              <td class="test-duration">47</td>
           </tr>
           <tr class="show Basic_HTTP_Tests success">
               <td class="test-id">2</td>
               <td class="test-title">Basic HTTP Tests GET all records
                   
               </td>
-              <td class="test-duration">12</td>
+              <td class="test-duration">14</td>
           </tr>
           <tr class="show Basic_HTTP_Tests success">
               <td class="test-id">3</td>
               <td class="test-title">Basic HTTP Tests GET top 10 records
                   
               </td>
-              <td class="test-duration">5</td>
+              <td class="test-duration">4</td>
           </tr>
           <tr class="show Basic_HTTP_Tests success">
               <td class="test-id">4</td>
               <td class="test-title">Basic HTTP Tests GET created record
                   
               </td>
-              <td class="test-duration">3</td>
+              <td class="test-duration">4</td>
           </tr>
           <tr class="show Basic_HTTP_Tests success">
               <td class="test-id">5</td>
@@ -647,45 +645,24 @@
               <td class="test-title">Basic HTTP Tests DELETE created record
                   
               </td>
-              <td class="test-duration">9</td>
+              <td class="test-duration">6</td>
           </tr>
           <tr class="show Main success">
               <td class="test-id">7</td>
               <td class="test-title">Main Server can be started
                   
               </td>
-              <td class="test-duration">7</td>
-          </tr>
-          <tr class="show Mongo failure">
-              <td class="test-id">8</td>
-              <td class="test-title">Mongo should have mongoose
-                  <div class="stack"></div>
-              </td>
-              <td class="test-duration">0</td>
-          </tr>
-          <tr class="show Mongo failure">
-              <td class="test-id">9</td>
-              <td class="test-title">Mongo should disconnect mongoose
-                  <div class="stack"></div>
-              </td>
-              <td class="test-duration">0</td>
+              <td class="test-duration">17</td>
           </tr>
           </tbody>
       </table>
     
-      <h2>Script errors :</h2>
-      <ul>
-        <li>
-          <div>Trying to open unclosed connection.</div>
-          <pre>  at NativeConnection.Connection.open &#x28;&#x2f;Users&#x2f;luismatute&#x2f;Sites&#x2f;LM&#x2f;skeleton&#x2f;node_modules&#x2f;mongoose&#x2f;lib&#x2f;connection.js:237:15&#x29;&#x0a;  at Mongoose.connect &#x28;&#x2f;Users&#x2f;luismatute&#x2f;Sites&#x2f;LM&#x2f;skeleton&#x2f;node_modules&#x2f;mongoose&#x2f;lib&#x2f;index.js:242:47&#x29;&#x0a;  at startDb &#x28;&#x2f;Users&#x2f;luismatute&#x2f;Sites&#x2f;LM&#x2f;skeleton&#x2f;lib&#x2f;plugins&#x2f;db.js:45:111&#x29;&#x0a;  at internals.defaults.validate &#x28;&#x2f;Users&#x2f;luismatute&#x2f;Sites&#x2f;LM&#x2f;skeleton&#x2f;lib&#x2f;plugins&#x2f;db.js:79:93&#x29;&#x0a;  at Object._validateWithOptions &#x28;&#x2f;Users&#x2f;luismatute&#x2f;Sites&#x2f;LM&#x2f;skeleton&#x2f;node_modules&#x2f;joi&#x2f;lib&#x2f;any.js:610:20&#x29;&#x0a;  at Object.validate &#x28;&#x2f;Users&#x2f;luismatute&#x2f;Sites&#x2f;LM&#x2f;skeleton&#x2f;node_modules&#x2f;joi&#x2f;lib&#x2f;any.js:619:25&#x29;&#x0a;  at Object.exports.register &#x28;&#x2f;Users&#x2f;luismatute&#x2f;Sites&#x2f;LM&#x2f;skeleton&#x2f;lib&#x2f;plugins&#x2f;db.js:32:108&#x29;&#x0a;  at Object.target &#x5b;as register&#x5d; &#x28;&#x2f;Users&#x2f;luismatute&#x2f;Sites&#x2f;LM&#x2f;skeleton&#x2f;node_modules&#x2f;joi&#x2f;lib&#x2f;object.js:77:34&#x29;&#x0a;  at each &#x28;&#x2f;Users&#x2f;luismatute&#x2f;Sites&#x2f;LM&#x2f;skeleton&#x2f;node_modules&#x2f;hapi&#x2f;lib&#x2f;plugin.js:318:14&#x29;&#x0a;  at iterate &#x28;&#x2f;Users&#x2f;luismatute&#x2f;Sites&#x2f;LM&#x2f;skeleton&#x2f;node_modules&#x2f;items&#x2f;lib&#x2f;index.js:36:13&#x29;&#x0a;  at Object.exports.serial &#x28;&#x2f;Users&#x2f;luismatute&#x2f;Sites&#x2f;LM&#x2f;skeleton&#x2f;node_modules&#x2f;items&#x2f;lib&#x2f;index.js:39:9&#x29;&#x0a;  at module.exports.internals.Server.internals.Plugin.register &#x28;&#x2f;Users&#x2f;luismatute&#x2f;Sites&#x2f;LM&#x2f;skeleton&#x2f;node_modules&#x2f;hapi&#x2f;lib&#x2f;plugin.js:321:11&#x29;&#x0a;  at Server.init &#x28;&#x2f;Users&#x2f;luismatute&#x2f;Sites&#x2f;LM&#x2f;skeleton&#x2f;test&#x2f;mongo.js:44:20&#x29;&#x0a;  at server.start &#x28;&#x2f;Users&#x2f;luismatute&#x2f;Sites&#x2f;LM&#x2f;skeleton&#x2f;lib&#x2f;index.js:14:108&#x29;&#x0a;  at _invoke &#x28;&#x2f;Users&#x2f;luismatute&#x2f;Sites&#x2f;LM&#x2f;skeleton&#x2f;node_modules&#x2f;hapi&#x2f;lib&#x2f;server.js:334:24&#x29;&#x0a;  at module.exports.internals.Server.internals.Server._invoke &#x28;&#x2f;Users&#x2f;luismatute&#x2f;Sites&#x2f;LM&#x2f;skeleton&#x2f;node_modules&#x2f;hapi&#x2f;lib&#x2f;server.js:403:16&#x29;&#x0a;  at Object._events.emit &#x5b;as callback&#x5d; &#x28;&#x2f;Users&#x2f;luismatute&#x2f;Sites&#x2f;LM&#x2f;skeleton&#x2f;node_modules&#x2f;hapi&#x2f;lib&#x2f;server.js:326:18&#x29;&#x0a;  at internals.itemCallback &#x28;&#x2f;Users&#x2f;luismatute&#x2f;Sites&#x2f;LM&#x2f;skeleton&#x2f;node_modules&#x2f;podium&#x2f;lib&#x2f;index.js:266:10&#x29;&#x0a;  at _combinedTickCallback &#x28;internal&#x2f;process&#x2f;next_tick.js:71:11&#x29;&#x0a;  at process._tickDomainCallback &#x28;internal&#x2f;process&#x2f;next_tick.js:122:9&#x29;</pre>
-        </li>
-      </ul>
     </div>    <div id="coverage">
         <h1>Code Coverage Report</h1>
         <div class="stats high">
-            <div class="percentage">94.68%</div>
-            <div class="sloc">489</div>
-            <div class="hits">463</div>
+            <div class="percentage">95.59%</div>
+            <div class="sloc">589</div>
+            <div class="hits">563</div>
             <div class="misses">26</div>
         </div>
         <div id="files">
@@ -693,8 +670,8 @@
                 <h2 id="config/index.js">config/index.js</h2>
                 <div class="stats high">
                     <div class="percentage">100%</div>
-                    <div class="sloc">116</div>
-                    <div class="hits">116</div>
+                    <div class="sloc">217</div>
+                    <div class="hits">217</div>
                     <div class="misses">0</div>
                 </div>
                 <table>
@@ -957,19 +934,19 @@
                             <td class="line" data-tooltip>42</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                &#x27;labels&#x27;: [&#x27;api&#x27;],</td>
+                            <td class="source">                labels: [&#x27;api&#x27;],</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>43</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                &#x27;routes&#x27;: {</td>
+                            <td class="source">                routes: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>44</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                    &#x27;cors&#x27;: true</td>
+                            <td class="source">                    cors: true</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>45</td>
@@ -981,7 +958,7 @@
                             <td class="line" data-tooltip>46</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                &#x27;port&#x27;: {</td>
+                            <td class="source">                port: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>47</td>
@@ -1011,7 +988,7 @@
                             <td class="line" data-tooltip>51</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                &#x27;host&#x27;: {</td>
+                            <td class="source">                host: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>52</td>
@@ -1065,19 +1042,19 @@
                             <td class="line" data-tooltip>60</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                &#x27;plugin&#x27;: &#x27;hapi-boom-jsend&#x27;,</td>
+                            <td class="source">                plugin: &#x27;hapi-boom-jsend&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>61</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                &#x27;options&#x27;: {</td>
+                            <td class="source">                options: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>62</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                    &#x27;select&#x27;: [&#x27;api&#x27;]</td>
+                            <td class="source">                    select: [&#x27;api&#x27;]</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>63</td>
@@ -1101,19 +1078,19 @@
                             <td class="line" data-tooltip>66</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                &#x27;plugin&#x27;: &#x27;vision&#x27;,</td>
+                            <td class="source">                plugin: &#x27;vision&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>67</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                &#x27;options&#x27;: {</td>
+                            <td class="source">                options: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>68</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                    &#x27;select&#x27;: [&#x27;api&#x27;]</td>
+                            <td class="source">                    select: [&#x27;api&#x27;]</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>69</td>
@@ -1137,19 +1114,19 @@
                             <td class="line" data-tooltip>72</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                &#x27;plugin&#x27;: &#x27;inert&#x27;,</td>
+                            <td class="source">                plugin: &#x27;inert&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>73</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                &#x27;options&#x27;: {</td>
+                            <td class="source">                options: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>74</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                    &#x27;select&#x27;: [&#x27;api&#x27;]</td>
+                            <td class="source">                    select: [&#x27;api&#x27;]</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>75</td>
@@ -1173,19 +1150,19 @@
                             <td class="line" data-tooltip>78</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                &#x27;plugin&#x27;: {</td>
+                            <td class="source">                plugin: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>79</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                    &#x27;register&#x27;: &#x27;lout&#x27;,</td>
+                            <td class="source">                    register: &#x27;lout&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>80</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                    &#x27;options&#x27;: {</td>
+                            <td class="source">                    options: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>81</td>
@@ -1209,13 +1186,13 @@
                             <td class="line" data-tooltip>84</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                &#x27;options&#x27;: {</td>
+                            <td class="source">                options: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>85</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                    &#x27;select&#x27;: [&#x27;api&#x27;]</td>
+                            <td class="source">                    select: [&#x27;api&#x27;]</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>86</td>
@@ -1239,19 +1216,19 @@
                             <td class="line" data-tooltip>89</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                &#x27;plugin&#x27;: &#x27;./plugins/routes&#x27;,</td>
+                            <td class="source">                plugin: &#x27;./plugins/routes&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>90</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                &#x27;options&#x27;: {</td>
+                            <td class="source">                options: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>91</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                    &#x27;select&#x27;: [&#x27;api&#x27;]</td>
+                            <td class="source">                    select: [&#x27;api&#x27;]</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>92</td>
@@ -1275,19 +1252,19 @@
                             <td class="line" data-tooltip>95</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                &#x27;plugin&#x27;: &#x27;./plugins/mailer&#x27;,</td>
+                            <td class="source">                plugin: &#x27;./plugins/mailer&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>96</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                &#x27;options&#x27;: {</td>
+                            <td class="source">                options: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>97</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                    &#x27;select&#x27;: [&#x27;api&#x27;]</td>
+                            <td class="source">                    select: [&#x27;api&#x27;]</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>98</td>
@@ -1311,19 +1288,19 @@
                             <td class="line" data-tooltip>101</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                &#x27;plugin&#x27;: {</td>
+                            <td class="source">                plugin: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>102</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                    &#x27;register&#x27;: &#x27;./plugins/db&#x27;,</td>
+                            <td class="source">                    register: &#x27;./plugins/db&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>103</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                    &#x27;options&#x27;: internals.mongo</td>
+                            <td class="source">                    options: internals.mongo</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>104</td>
@@ -1335,13 +1312,13 @@
                             <td class="line" data-tooltip>105</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                &#x27;options&#x27;: {</td>
+                            <td class="source">                options: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>106</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">                    &#x27;select&#x27;: [&#x27;api&#x27;]</td>
+                            <td class="source">                    select: [&#x27;api&#x27;]</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>107</td>
@@ -1353,94 +1330,700 @@
                             <td class="line" data-tooltip>108</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            }</td>
+                            <td class="source">            },</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>109</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        ]</td>
+                            <td class="source">            {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>110</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">    }</td>
+                            <td class="source">                plugin: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>111</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">};</td>
+                            <td class="source">                    register: &#x27;good&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>112</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">                    options: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>113</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">// Creating confidence store &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</td>
+                            <td class="source">                        ops: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>114</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">internals.store &#x3D; new Confidence.Store(internals.config);</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                            interval: 1000</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>115</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">                        },</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>116</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">// Exposing GET method fro retrieving conf &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</td>
+                            <td class="source">                        reporters: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>117</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">exports.get &#x3D; (key, opts &#x3D; {}) &#x3D;&gt; {</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                            $filter: &#x27;env&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>118</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">                            $default: {},</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>119</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">    const criteria &#x3D; Object.assign({}, internals.defaults, opts);</td>
+                            <td class="source">                            prd: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>120</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
+                            <td class="source">                                console: [{</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>121</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">    return internals.store.get(key, criteria);</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    module: &#x27;good-squeeze&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>122</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">};</td>
+                            <td class="source">                                    name: &#x27;Squeeze&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>123</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    args: [{ &#x27;log&#x27;: &#x27;*&#x27;, &#x27;request&#x27;: &#x27;*&#x27;, &#x27;response&#x27;: &#x27;*&#x27;, &#x27;error&#x27;: &#x27;*&#x27; }]</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>124</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                }, {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>125</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    module: &#x27;good-console&#x27;</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>126</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                }, &#x27;stdout&#x27;],</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>127</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                &#x27;file-ops&#x27;: [</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>128</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>129</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        module: &#x27;good-squeeze&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>130</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        name: &#x27;Squeeze&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>131</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        args: [{ &#x27;ops&#x27;: &#x27;*&#x27; }]</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>132</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    },</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>133</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>134</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        module: &#x27;good-squeeze&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>135</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        name: &#x27;SafeJson&#x27;</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>136</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    },</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>137</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>138</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        module: &#x27;good-file&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>139</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        args: [&#x27;./logs/ops.log&#x27;]</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>140</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    }</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>141</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                ],</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>142</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                &#x27;file-error&#x27;: [</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>143</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>144</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        module: &#x27;good-squeeze&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>145</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        name: &#x27;Squeeze&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>146</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        args: [{ &#x27;error&#x27;: &#x27;*&#x27;, &#x27;log&#x27;: &#x27;error&#x27; }]</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>147</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    },</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>148</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>149</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        module: &#x27;good-squeeze&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>150</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        name: &#x27;SafeJson&#x27;</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>151</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    },</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>152</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>153</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        module: &#x27;good-file&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>154</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        args: [&#x27;./logs/errors.log&#x27;]</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>155</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    }</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>156</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                ],</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>157</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                &#x27;file-http&#x27;: [</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>158</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>159</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        module: &#x27;good-squeeze&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>160</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        name: &#x27;Squeeze&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>161</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        args: [{ &#x27;response&#x27;: &#x27;*&#x27; }]</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>162</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    },</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>163</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>164</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        module: &#x27;good-squeeze&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>165</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        name: &#x27;SafeJson&#x27;</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>166</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    },</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>167</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>168</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        module: &#x27;good-file&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>169</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        args: [&#x27;./logs/request.log&#x27;]</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>170</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    }</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>171</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                ],</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>172</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                &#x27;file-app&#x27;: [</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>173</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>174</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        module: &#x27;good-squeeze&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>175</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        name: &#x27;Squeeze&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>176</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        args: [{ &#x27;log&#x27;: &#x27;app&#x27; }]</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>177</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    },</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>178</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>179</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        module: &#x27;good-squeeze&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>180</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        name: &#x27;SafeJson&#x27;</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>181</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    },</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>182</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>183</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        module: &#x27;good-file&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>184</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        args: [&#x27;./logs/app.log&#x27;]</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>185</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    }</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>186</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                ],</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>187</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                &#x27;file-mongo&#x27;: [</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>188</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>189</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        module: &#x27;good-squeeze&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>190</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        name: &#x27;Squeeze&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>191</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        args: [{ &#x27;log&#x27;: &#x27;mongo&#x27; }]</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>192</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    },</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>193</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>194</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        module: &#x27;good-squeeze&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>195</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        name: &#x27;SafeJson&#x27;</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>196</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    },</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>197</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>198</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        module: &#x27;good-file&#x27;,</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>199</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                        args: [&#x27;./logs/mongo.log&#x27;]</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>200</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                    }</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>201</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                                ]</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>202</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                            }</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>203</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                        }</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>204</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                    }</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>205</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                },</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>206</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                &#x27;options&#x27;: {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>207</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                    &#x27;select&#x27;: [&#x27;api&#x27;]</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>208</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">                }</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>209</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">            },</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>210</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">        ]</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>211</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">    }</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>212</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">};</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>213</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>214</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">// Creating confidence store &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>215</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">internals.store &#x3D; new Confidence.Store(internals.config);</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>216</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>217</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">// Exposing GET method fro retrieving conf &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>218</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">exports.get &#x3D; (key, opts &#x3D; {}) &#x3D;&gt; {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>219</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>220</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">    const criteria &#x3D; Object.assign({}, internals.defaults, opts);</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>221</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>222</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">    return internals.store.get(key, criteria);</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>223</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">};</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>224</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
@@ -1535,7 +2118,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>12</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>3</td>
+                            <td class="hits" data-tooltip>2</td>
                             <td class="source">        server.start((_err) &#x3D;&gt; {</td>
                         </tr>
                         <tr class="hit">
@@ -3002,9 +3585,9 @@
             <div class="file">
                 <h2 id="lib/plugins/db.js">lib/plugins/db.js</h2>
                 <div class="stats high">
-                    <div class="percentage">81.33%</div>
-                    <div class="sloc">75</div>
-                    <div class="hits">61</div>
+                    <div class="percentage">81.08%</div>
+                    <div class="sloc">74</div>
+                    <div class="hits">60</div>
                     <div class="misses">14</div>
                 </div>
                 <table>
@@ -3182,19 +3765,19 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>28</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
+                            <td class="hits" data-tooltip>1</td>
                             <td class="source">    let stopDb &#x3D; null;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>29</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
+                            <td class="hits" data-tooltip>1</td>
                             <td class="source">    let db;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>30</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
+                            <td class="hits" data-tooltip>1</td>
                             <td class="source">    let msg &#x3D; &#x27;&#x27;;</td>
                         </tr>
                         <tr class="hit">
@@ -3206,7 +3789,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>32</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
+                            <td class="hits" data-tooltip>1</td>
                             <td class="source">    internals.defaults.validate(options, (err, opts) &#x3D;&gt; {</td>
                         </tr>
                         <tr class="hit">
@@ -3248,7 +3831,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>39</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
+                            <td class="hits" data-tooltip>1</td>
                             <td class="source">        startDb &#x3D; () &#x3D;&gt; {</td>
                         </tr>
                         <tr class="hit">
@@ -3272,8 +3855,8 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>43</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">            console.log(&#x27;mongo&#x27;, &#x60;Mongoose connecting to ${url}&#x60;);</td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">            db &#x3D; Mongoose.connect(url, opts.mongoOptions, (err) &#x3D;&gt; {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>44</td>
@@ -3281,350 +3864,338 @@
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>45</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">            db &#x3D; Mongoose.connect(url, opts.mongoOptions, (err) &#x3D;&gt; {</td>
-                        </tr>
+                            <tr class="chunks">
+                                <td class="line" data-tooltip>45</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source"><div>                </div><div class="miss never" data-tooltip>msg &#x3D; &#x60;Mongoose connected to ${url}&#x60;;</div></td>
+                            </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>46</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
-                            <tr class="chunks">
-                                <td class="line" data-tooltip>47</td>
-                                <td class="lint empty"></td>
-                                <td class="hits" data-tooltip></td>
-                                <td class="source"><div>                </div><div class="miss never" data-tooltip>msg &#x3D; &#x60;Mongoose connected to ${url}&#x60;;</div></td>
-                            </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>48</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
-                        </tr>
                             <tr class="miss">
-                                <td class="line" data-tooltip>49</td>
+                                <td class="line" data-tooltip>47</td>
                                 <td class="lint empty"></td>
                                 <td class="hits" data-tooltip></td>
                                 <td class="source" data-tooltip>                if (err) {</td>
                             </tr>
                             <tr class="miss">
-                                <td class="line" data-tooltip>50</td>
+                                <td class="line" data-tooltip>48</td>
                                 <td class="lint empty"></td>
                                 <td class="hits" data-tooltip></td>
                                 <td class="source" data-tooltip>                    msg &#x3D; &#x27;Mongoose connection failure&#x27;;</td>
                             </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>51</td>
+                            <td class="line" data-tooltip>49</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">                }</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>52</td>
+                            <td class="line" data-tooltip>50</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                             <tr class="miss">
-                                <td class="line" data-tooltip>53</td>
+                                <td class="line" data-tooltip>51</td>
                                 <td class="lint empty"></td>
                                 <td class="hits" data-tooltip></td>
                                 <td class="source" data-tooltip>                return console.log(&#x27;mongo&#x27;, msg);</td>
                             </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>54</td>
+                            <td class="line" data-tooltip>52</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">            });</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>55</td>
+                            <td class="line" data-tooltip>53</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>56</td>
+                            <td class="line" data-tooltip>54</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">            db.set(&#x27;debug&#x27;, true);</td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source">            // db.set(&#x27;debug&#x27;, true);</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>57</td>
+                            <td class="line" data-tooltip>55</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">            // db.set(&#x27;debug&#x27;, (collectionName, methodName) &#x3D;&gt; {</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>58</td>
+                            <td class="line" data-tooltip>56</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>59</td>
+                            <td class="line" data-tooltip>57</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">            //     console.log(arguments);</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>60</td>
+                            <td class="line" data-tooltip>58</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">            // });</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>61</td>
+                            <td class="line" data-tooltip>59</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>62</td>
+                            <td class="line" data-tooltip>60</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">            return db;</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>63</td>
+                            <td class="line" data-tooltip>61</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">        };</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>64</td>
+                            <td class="line" data-tooltip>62</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>65</td>
+                            <td class="line" data-tooltip>63</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">        //&#x3D;&#x3D; Kills mongo connection</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>66</td>
+                            <td class="line" data-tooltip>64</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
+                            <td class="hits" data-tooltip>1</td>
                             <td class="source">        stopDb &#x3D; (shouldKill &#x3D; true) &#x3D;&gt; {</td>
                         </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>65</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip></td>
+                            <td class="source"></td>
+                        </tr>
+                            <tr class="chunks">
+                                <td class="line" data-tooltip>66</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source"><div>            </div><div class="miss never" data-tooltip>Mongoose.disconnect(() &#x3D;&gt; {</div></td>
+                            </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>67</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
-                            <tr class="chunks">
-                                <td class="line" data-tooltip>68</td>
-                                <td class="lint empty"></td>
-                                <td class="hits" data-tooltip></td>
-                                <td class="source"><div>            </div><div class="miss never" data-tooltip>Mongoose.disconnect(() &#x3D;&gt; {</div></td>
-                            </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>69</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source"></td>
-                        </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>70</td>
+                            <td class="line" data-tooltip>68</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">                // &#x60;shouldKill&#x60; added so that tests can</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>71</td>
+                            <td class="line" data-tooltip>69</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">                // continue after disconnect</td>
                         </tr>
                             <tr class="chunks">
-                                <td class="line" data-tooltip>72</td>
+                                <td class="line" data-tooltip>70</td>
                                 <td class="lint empty"></td>
                                 <td class="hits" data-tooltip></td>
                                 <td class="source"><div>                </div><div class="miss never" data-tooltip>if (shouldKill) {</div></td>
                             </tr>
                             <tr class="miss">
-                                <td class="line" data-tooltip>73</td>
+                                <td class="line" data-tooltip>71</td>
                                 <td class="lint empty"></td>
                                 <td class="hits" data-tooltip></td>
                                 <td class="source" data-tooltip>                    internals.close();</td>
                             </tr>
                             <tr class="chunks">
-                                <td class="line" data-tooltip>74</td>
+                                <td class="line" data-tooltip>72</td>
                                 <td class="lint empty"></td>
                                 <td class="hits" data-tooltip></td>
                                 <td class="source"><div class="miss never" data-tooltip>                }</div></td>
                             </tr>
                             <tr class="chunks">
-                                <td class="line" data-tooltip>75</td>
+                                <td class="line" data-tooltip>73</td>
                                 <td class="lint empty"></td>
                                 <td class="hits" data-tooltip></td>
                                 <td class="source"><div class="miss never" data-tooltip>            });</div></td>
                             </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>76</td>
+                            <td class="line" data-tooltip>74</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">        };</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>77</td>
+                            <td class="line" data-tooltip>75</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>78</td>
+                            <td class="line" data-tooltip>76</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">        //&#x3D;&#x3D; Kickstart the DB</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>79</td>
+                            <td class="line" data-tooltip>77</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
+                            <td class="hits" data-tooltip>1</td>
                             <td class="source">        startDb();</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>80</td>
+                            <td class="line" data-tooltip>78</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>81</td>
+                            <td class="line" data-tooltip>79</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">        //&#x3D;&#x3D; Exposing plugin&#x27;s properties and methods</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>82</td>
+                            <td class="line" data-tooltip>80</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">        plugin.expose(&#x27;mongoose&#x27;, Mongoose);</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>83</td>
+                            <td class="line" data-tooltip>81</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">        plugin.expose(&#x27;start&#x27;, startDb);</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>84</td>
+                            <td class="line" data-tooltip>82</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">        plugin.expose(&#x27;stop&#x27;, stopDb);</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>85</td>
+                            <td class="line" data-tooltip>83</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>86</td>
+                            <td class="line" data-tooltip>84</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">        // If the Node process ends, close the Mongoose connection</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>87</td>
+                            <td class="line" data-tooltip>85</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">        process.on(&#x27;SIGINT&#x27;, () &#x3D;&gt; {</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>88</td>
+                            <td class="line" data-tooltip>86</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                             <tr class="chunks">
-                                <td class="line" data-tooltip>89</td>
+                                <td class="line" data-tooltip>87</td>
                                 <td class="lint empty"></td>
                                 <td class="hits" data-tooltip></td>
                                 <td class="source"><div>            </div><div class="miss never" data-tooltip>console.log(&#x27;mongo&#x27;, &#x27;Mongoose disconnected on app termination&#x27;);</div></td>
                             </tr>
                             <tr class="miss">
-                                <td class="line" data-tooltip>90</td>
+                                <td class="line" data-tooltip>88</td>
                                 <td class="lint empty"></td>
                                 <td class="hits" data-tooltip></td>
                                 <td class="source" data-tooltip>            stopDb();</td>
                             </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>91</td>
+                            <td class="line" data-tooltip>89</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">        });</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>92</td>
+                            <td class="line" data-tooltip>90</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>93</td>
+                            <td class="line" data-tooltip>91</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">        next(); // Move along</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>94</td>
+                            <td class="line" data-tooltip>92</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">    });</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>95</td>
+                            <td class="line" data-tooltip>93</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">};</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>96</td>
+                            <td class="line" data-tooltip>94</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>97</td>
+                            <td class="line" data-tooltip>95</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">// Exposing Plugin Attributes &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>98</td>
+                            <td class="line" data-tooltip>96</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip>1</td>
                             <td class="source">exports.register.attributes &#x3D; {</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>99</td>
+                            <td class="line" data-tooltip>97</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">    name: &#x27;db&#x27;,</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>100</td>
+                            <td class="line" data-tooltip>98</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">    version: Pckg.version</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>101</td>
+                            <td class="line" data-tooltip>99</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source">};</td>
                         </tr>
                         <tr class="hit">
-                            <td class="line" data-tooltip>102</td>
+                            <td class="line" data-tooltip>100</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
