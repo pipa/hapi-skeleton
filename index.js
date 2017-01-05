@@ -1,25 +1,38 @@
-// load modules ========================================
-const Hoek = require('hoek');
+// Deps =========================================
 const Config = require('~/config');
 const Server = require('~/lib');
+const Pkg = require('~/package.json');
 
-// internals Declarations ==============================
+// internals Declarations =======================
 const internals = {
-    options: { relativeTo: `${ __dirname }/lib` }
+    options: {
+        relativeTo: `${ __dirname }/lib`
+    }
 };
 
-// init the server =====================================
+// init the server ==============================
 Server.init(Config.get('/manifest'), internals.options, (err, server) => {
 
-    Hoek.assert(!err, err);
+    if (err) {
+        server.log(['error', 'app', 'start'], {
+            desc: `${ Pkg.name.toUpperCase() } could not be started`,
+            err
+        });
 
-    // server connections
-    const api = server.select('api');
+        return false;
+    }
 
     server.app = {
         rootPath: __dirname
     };
 
     // logging start server
-    console.log('app', `Api server started at: ${api.info.uri}`);
+    server.log(['app', 'start'], {
+        desc: `${ Pkg.name.toUpperCase() } server started`,
+        host: server.info.host,
+        port: server.info.port,
+        protocol: server.info.protocol,
+        uri: server.info.uri,
+        address: server.info.address
+    });
 });

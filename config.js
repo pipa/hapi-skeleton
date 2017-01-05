@@ -5,21 +5,20 @@ const Pkg = require('~/package.json');
 // Internals ====================================
 const internals = {
     defaults: {
-        /* $lab:coverage:off$ */
         env: process.env.NODE_ENV || 'dev'
-        /* $lab:coverage:on$ */
     },
     mongo: {
         db: 'skeleton',
         host: 'localhost',
-        port: 27017
+        port: 27017,
+        mongoOptions: {}
     },
+    label: ['skeleton'],
     store: null
 };
 
 // Config =======================================
 internals.config = {
-    root: `${__dirname}/..`,
     database: {
         mongodb: internals.mongo
     },
@@ -39,7 +38,7 @@ internals.config = {
     manifest: {
         connections: [
             {
-                labels: ['api'],
+                labels: internals.label,
                 routes: {
                     cors: true
                 },
@@ -59,19 +58,25 @@ internals.config = {
             {
                 plugin: 'hapi-boom-jsend',
                 options: {
-                    select: ['api']
+                    select: internals.label
                 }
             },
             {
                 plugin: 'vision',
                 options: {
-                    select: ['api']
+                    select: internals.label
                 }
             },
             {
                 plugin: 'inert',
                 options: {
-                    select: ['api']
+                    select: internals.label
+                }
+            },
+            {
+                plugin: 'scooter',
+                options: {
+                    select: internals.label
                 }
             },
             {
@@ -82,19 +87,19 @@ internals.config = {
                     }
                 },
                 options: {
-                    select: ['api']
+                    select: internals.label
                 }
             },
             {
-                plugin: './plugins/routes',
+                plugin: './plugins/router',
                 options: {
-                    select: ['api']
+                    select: internals.label
                 }
             },
             {
                 plugin: './plugins/mailer',
                 options: {
-                    select: ['api']
+                    select: internals.label
                 }
             },
             {
@@ -103,22 +108,25 @@ internals.config = {
                     options: internals.mongo
                 },
                 options: {
-                    select: ['api']
+                    select: internals.label
                 }
             },
             {
                 plugin: './plugins/shutdown',
                 options: {
-                    select: ['api']
+                    select: internals.label
+                }
+            },
+            {
+                plugin: './plugins/version',
+                options: {
+                    select: internals.label
                 }
             },
             {
                 plugin: {
                     register: 'good',
                     options: {
-                        ops: {
-                            interval: 1000
-                        },
                         reporters: {
                             console: [{
                                 module: 'good-squeeze',
@@ -127,21 +135,6 @@ internals.config = {
                             }, {
                                 module: 'good-console'
                             }, 'stdout'],
-                            'file-ops': [
-                                {
-                                    module: 'good-squeeze',
-                                    name: 'Squeeze',
-                                    args: [{ 'ops': '*' }]
-                                },
-                                {
-                                    module: 'good-squeeze',
-                                    name: 'SafeJson'
-                                },
-                                {
-                                    module: 'good-file',
-                                    args: ['./logs/ops.log']
-                                }
-                            ],
                             'file-error': [
                                 {
                                     module: 'good-squeeze',
@@ -155,21 +148,6 @@ internals.config = {
                                 {
                                     module: 'good-file',
                                     args: ['./logs/errors.log']
-                                }
-                            ],
-                            'file-http': [
-                                {
-                                    module: 'good-squeeze',
-                                    name: 'Squeeze',
-                                    args: [{ 'response': '*' }]
-                                },
-                                {
-                                    module: 'good-squeeze',
-                                    name: 'SafeJson'
-                                },
-                                {
-                                    module: 'good-file',
-                                    args: ['./logs/request.log']
                                 }
                             ],
                             'file-app': [
@@ -191,7 +169,7 @@ internals.config = {
                                 {
                                     module: 'good-squeeze',
                                     name: 'Squeeze',
-                                    args: [{ 'log': 'mongo' }]
+                                    args: [{ 'log': 'mongo', request: 'mongo' }]
                                 },
                                 {
                                     module: 'good-squeeze',
@@ -206,7 +184,7 @@ internals.config = {
                     }
                 },
                 'options': {
-                    'select': ['api']
+                    'select': internals.label
                 }
             },
         ]
