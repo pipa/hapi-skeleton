@@ -1,7 +1,7 @@
 // load modules ========================================
 const Hoek = require('hoek');
 const Config = require('~/config');
-const Server = require('./lib');
+const Server = require('~/lib');
 
 // internals Declarations ==============================
 const internals = {
