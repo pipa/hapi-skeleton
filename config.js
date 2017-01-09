@@ -36,6 +36,17 @@ internals.config = {
         }
     },
     manifest: {
+        server: {
+            cache: [{
+                name: 'redisCache',
+                engine: 'catbox-redis',
+                host: 'portal.clever-redis.quickcar-rental.composedb.com',
+                port: 15924,
+                password: 'IJEAHUIIIQYPNHNR',
+                database: 'haproxy1696',
+                partition: 'cache'
+            }]
+        },
         connections: [
             {
                 labels: internals.label,
@@ -57,6 +68,21 @@ internals.config = {
         registrations: [
             {
                 plugin: 'hapi-boom-jsend',
+                options: {
+                    select: internals.label
+                }
+            },
+            {
+                plugin: {
+                    register: 'yar',
+                    options: {
+                        name: 'session',
+                        cookieOptions: {
+                            password: '!?fR!Jd,?3,M}V53mEVG8r}q6m8@~=%7',
+                            isSecure: true
+                        }
+                    }
+                },
                 options: {
                     select: internals.label
                 }
@@ -135,21 +161,21 @@ internals.config = {
                             }, {
                                 module: 'good-console'
                             }, 'stdout'],
-                            'file-error': [
-                                {
-                                    module: 'good-squeeze',
-                                    name: 'Squeeze',
-                                    args: [{ 'error': '*', 'log': 'error' }]
-                                },
-                                {
-                                    module: 'good-squeeze',
-                                    name: 'SafeJson'
-                                },
-                                {
-                                    module: 'good-file',
-                                    args: ['./logs/errors.log']
-                                }
-                            ],
+                            // 'file-error': [
+                            //     {
+                            //         module: 'good-squeeze',
+                            //         name: 'Squeeze',
+                            //         args: [{ 'error': '*', 'log': 'error' }]
+                            //     },
+                            //     {
+                            //         module: 'good-squeeze',
+                            //         name: 'SafeJson'
+                            //     },
+                            //     {
+                            //         module: 'good-file',
+                            //         args: ['./logs/errors.log']
+                            //     }
+                            // ],
                             'file-app': [
                                 {
                                     module: 'good-squeeze',
@@ -157,29 +183,25 @@ internals.config = {
                                     args: [{ 'log': 'app' }]
                                 },
                                 {
-                                    module: 'good-squeeze',
-                                    name: 'SafeJson'
-                                },
-                                {
                                     module: 'good-file',
                                     args: ['./logs/app.log']
                                 }
                             ],
-                            'file-mongo': [
-                                {
-                                    module: 'good-squeeze',
-                                    name: 'Squeeze',
-                                    args: [{ 'log': 'mongo', request: 'mongo' }]
-                                },
-                                {
-                                    module: 'good-squeeze',
-                                    name: 'SafeJson'
-                                },
-                                {
-                                    module: 'good-file',
-                                    args: ['./logs/mongo.log']
-                                }
-                            ]
+                            // 'file-mongo': [
+                            //     {
+                            //         module: 'good-squeeze',
+                            //         name: 'Squeeze',
+                            //         args: [{ 'log': 'mongo', request: 'mongo' }]
+                            //     },
+                            //     {
+                            //         module: 'good-squeeze',
+                            //         name: 'SafeJson'
+                            //     },
+                            //     {
+                            //         module: 'good-file',
+                            //         args: ['./logs/mongo.log']
+                            //     }
+                            // ]
                         }
                     }
                 },
