@@ -37,15 +37,18 @@ internals.config = {
     },
     manifest: {
         server: {
-            cache: [{
-                name: 'redisCache',
-                engine: 'catbox-redis',
+            // cache: {
+            //     engine: require('catbox-mongodb'),
+            //     uri: 'mongodb://127.0.0.1:27017',
+            //     partition: 'cache'
+            // }
+            cache: {
+                engine: require('catbox-redis'),
                 host: 'portal.clever-redis.quickcar-rental.composedb.com',
                 port: 15924,
                 password: 'IJEAHUIIIQYPNHNR',
-                database: 'haproxy1696',
                 partition: 'cache'
-            }]
+            }
         },
         connections: [
             {
@@ -77,9 +80,10 @@ internals.config = {
                     register: 'yar',
                     options: {
                         name: 'session',
+                        maxCookieSize: 0,
                         cookieOptions: {
                             password: '!?fR!Jd,?3,M}V53mEVG8r}q6m8@~=%7',
-                            isSecure: true
+                            isSecure: false
                         }
                     }
                 },

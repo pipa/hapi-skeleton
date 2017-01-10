@@ -268,6 +268,10 @@ bson@~1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/bson/-/bson-1.0.1.tgz#3a5addb0f2ff88bc3436e708e4bdb8637602d72d"
 
+bson@~1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/bson/-/bson-1.0.3.tgz#a3b66f724b1673067efc32249e1151205d3ba854"
+
 buffer-shims@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/buffer-shims/-/buffer-shims-1.0.0.tgz#9978ce317388c649ad8793028c3477ef044a8b51"
@@ -330,6 +334,13 @@ catbox-memory@2.x.x:
   resolved "https://registry.yarnpkg.com/catbox-memory/-/catbox-memory-2.0.4.tgz#433e255902caf54233d1286429c8f4df14e822d5"
   dependencies:
     hoek "4.x.x"
+
+catbox-mongodb:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/catbox-mongodb/-/catbox-mongodb-3.0.0.tgz#091be6fd46f5cefd38daaaee3d3c0575bd961c44"
+  dependencies:
+    hoek "4.x.x"
+    mongodb "2.x.x"
 
 catbox-redis:
   version "2.0.2"
@@ -1668,12 +1679,27 @@ mongodb-core@2.1.2:
     bson "~1.0.1"
     require_optional "~1.0.0"
 
+mongodb-core@2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-2.1.4.tgz#97f84cb126606c72585e66066ea3a05e9c20dc9b"
+  dependencies:
+    bson "~1.0.3"
+    require_optional "~1.0.0"
+
 mongodb@2.2.16:
   version "2.2.16"
   resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-2.2.16.tgz#e32ba91cf9e29f371fb38ba0c4a71c3b1f5fae77"
   dependencies:
     es6-promise "3.2.1"
     mongodb-core "2.1.2"
+    readable-stream "2.1.5"
+
+mongodb@2.x.x:
+  version "2.2.19"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-2.2.19.tgz#9d84745f9369ff301df5a1790cf485375f1df7d7"
+  dependencies:
+    es6-promise "3.2.1"
+    mongodb-core "2.1.4"
     readable-stream "2.1.5"
 
 mongoose:
