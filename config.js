@@ -1,4 +1,4 @@
-// Load Modules =================================
+// Deps =========================================
 const Confidence = require('confidence');
 const Pkg = require('~/package.json');
 
@@ -13,7 +13,6 @@ const internals = {
         port: 27017,
         mongoOptions: {}
     },
-    label: ['skeleton'],
     store: null
 };
 
@@ -52,7 +51,6 @@ internals.config = {
         },
         connections: [
             {
-                labels: internals.label,
                 routes: {
                     cors: true
                 },
@@ -70,10 +68,7 @@ internals.config = {
         ],
         registrations: [
             {
-                plugin: 'hapi-boom-jsend',
-                options: {
-                    select: internals.label
-                }
+                plugin: 'hapi-boom-jsend'
             },
             {
                 plugin: {
@@ -86,28 +81,16 @@ internals.config = {
                             isSecure: false
                         }
                     }
-                },
-                options: {
-                    select: internals.label
                 }
             },
             {
-                plugin: 'vision',
-                options: {
-                    select: internals.label
-                }
+                plugin: 'vision'
             },
             {
-                plugin: 'inert',
-                options: {
-                    select: internals.label
-                }
+                plugin: 'inert'
             },
             {
-                plugin: 'scooter',
-                options: {
-                    select: internals.label
-                }
+                plugin: 'scooter'
             },
             {
                 plugin: {
@@ -115,49 +98,31 @@ internals.config = {
                     options: {
                         'apiVersion': Pkg.version
                     }
-                },
-                options: {
-                    select: internals.label
                 }
             },
             {
-                plugin: './plugins/router',
-                options: {
-                    select: internals.label
-                }
+                plugin: './plugins/heartbeat'
             },
             {
-                plugin: './plugins/mailer',
-                options: {
-                    select: internals.label
-                }
+                plugin: './plugins/router'
+            },
+            {
+                plugin: './plugins/mailer'
             },
             {
                 plugin: {
                     register: './plugins/db',
                     options: internals.mongo
-                },
-                options: {
-                    select: internals.label
                 }
             },
             {
-                plugin: './plugins/shutdown',
-                options: {
-                    select: internals.label
-                }
+                plugin: './plugins/shutdown'
             },
             {
-                plugin: './plugins/version',
-                options: {
-                    select: internals.label
-                }
+                plugin: './plugins/version'
             },
             {
-                plugin: './plugins/auth',
-                options: {
-                    select: internals.label
-                }
+                plugin: './plugins/auth'
             },
             {
                 plugin: {
@@ -218,9 +183,6 @@ internals.config = {
                             // ]
                         }
                     }
-                },
-                'options': {
-                    'select': internals.label
                 }
             },
         ]

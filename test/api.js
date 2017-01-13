@@ -1,3 +1,4 @@
+/*
 // Deps =========================================
 const Lab = require('lab');
 const Code = require('code');
@@ -140,3 +141,4 @@ describe('Basic HTTP Tests', () => {
         });
     });
 });
+*/
