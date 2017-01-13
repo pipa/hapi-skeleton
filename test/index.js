@@ -56,11 +56,11 @@ describe('Main', () => {
                 host: 'localhost'
             }
         ];
-        Server.init(internals.manifest, internals.composeOptions, (err, server) => {
+        Server.init(internals.manifest, internals.composeOptions, (err, _server) => {
 
             expect(err).to.not.exist();
-            expect(server).to.exist();
-            server.stop();
+            expect(_server).to.exist();
+            _server.stop();
             done();
         });
     });
@@ -96,11 +96,11 @@ describe('Main', () => {
 
     it('Server can gracefully stop', (done) => {
 
-        Server.init(internals.manifest, internals.composeOptions, (err, server) => {
+        Server.init(internals.manifest, internals.composeOptions, (err, _server) => {
 
             expect(err).to.not.exist();
-            expect(server).to.exist();
-            server.stop();
+            expect(_server).to.exist();
+            _server.stop();
             done();
         });
     });
