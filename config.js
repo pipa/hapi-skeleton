@@ -193,6 +193,10 @@ internals.config = {
                                     args: [{ 'log': 'app' }]
                                 },
                                 {
+                                    module: 'good-squeeze',
+                                    name: 'SafeJson'
+                                },
+                                {
                                     module: 'good-file',
                                     args: ['./logs/app.log']
                                 }
