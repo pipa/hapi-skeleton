@@ -44,8 +44,8 @@ internals.config = {
                 },
                 port: {
                     $filter: 'env',
-                    prd: 8080,
-                    $default: 8085
+                    prd: 8000,
+                    $default: 1806
                 },
                 host: {
                     $filter: 'env',
@@ -119,6 +119,12 @@ internals.config = {
             },
             {
                 plugin: './plugins/version',
+                options: {
+                    select: internals.label
+                }
+            },
+            {
+                plugin: './plugins/auth',
                 options: {
                     select: internals.label
                 }
