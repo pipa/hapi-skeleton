@@ -18,6 +18,7 @@ const internals = {
 
 // Config =======================================
 internals.config = {
+    root: __dirname,
     database: {
         mongodb: internals.mongo
     },
@@ -36,11 +37,6 @@ internals.config = {
     },
     manifest: {
         server: {
-            // cache: {
-            //     engine: require('catbox-mongodb'),
-            //     uri: 'mongodb://127.0.0.1:27017',
-            //     partition: 'cache'
-            // }
             cache: {
                 engine: require('catbox-redis'),
                 host: 'portal.clever-redis.quickcar-rental.composedb.com',
@@ -67,9 +63,17 @@ internals.config = {
             }
         ],
         registrations: [
-            {
-                plugin: 'hapi-boom-jsend'
-            },
+            { plugin: 'hapi-boom-jsend' },
+            { plugin: 'vision' },
+            { plugin: 'inert' },
+            { plugin: 'scooter' },
+            { plugin: './plugins/heartbeat' },
+            { plugin: './plugins/router' },
+            { plugin: './plugins/mailer' },
+            { plugin: './plugins/shutdown' },
+            { plugin: './plugins/version' },
+            { plugin: './plugins/auth' },
+            { plugin: './plugins/madero' },
             {
                 plugin: {
                     register: 'yar',
@@ -84,15 +88,6 @@ internals.config = {
                 }
             },
             {
-                plugin: 'vision'
-            },
-            {
-                plugin: 'inert'
-            },
-            {
-                plugin: 'scooter'
-            },
-            {
                 plugin: {
                     register: 'lout',
                     options: {
@@ -100,91 +95,73 @@ internals.config = {
                     }
                 }
             },
-            {
-                plugin: './plugins/heartbeat'
-            },
-            {
-                plugin: './plugins/router'
-            },
-            {
-                plugin: './plugins/mailer'
-            },
-            {
-                plugin: {
+            { plugin: {
                     register: './plugins/db',
                     options: internals.mongo
                 }
-            },
-            {
-                plugin: './plugins/shutdown'
-            },
-            {
-                plugin: './plugins/version'
-            },
-            {
-                plugin: './plugins/auth'
-            },
-            {
-                plugin: {
-                    register: 'good',
-                    options: {
-                        reporters: {
-                            console: [{
-                                module: 'good-squeeze',
-                                name: 'Squeeze',
-                                args: [{ 'log': '*', 'request': '*', 'response': '*', 'error': '*' }]
-                            }, {
-                                module: 'good-console'
-                            }, 'stdout'],
-                            // 'file-error': [
-                            //     {
-                            //         module: 'good-squeeze',
-                            //         name: 'Squeeze',
-                            //         args: [{ 'error': '*', 'log': 'error' }]
-                            //     },
-                            //     {
-                            //         module: 'good-squeeze',
-                            //         name: 'SafeJson'
-                            //     },
-                            //     {
-                            //         module: 'good-file',
-                            //         args: ['./logs/errors.log']
-                            //     }
-                            // ],
-                            'file-app': [
-                                {
-                                    module: 'good-squeeze',
-                                    name: 'Squeeze',
-                                    args: [{ 'log': 'app' }]
-                                },
-                                {
-                                    module: 'good-squeeze',
-                                    name: 'SafeJson'
-                                },
-                                {
-                                    module: 'good-file',
-                                    args: ['./logs/app.log']
-                                }
-                            ],
-                            // 'file-mongo': [
-                            //     {
-                            //         module: 'good-squeeze',
-                            //         name: 'Squeeze',
-                            //         args: [{ 'log': 'mongo', request: 'mongo' }]
-                            //     },
-                            //     {
-                            //         module: 'good-squeeze',
-                            //         name: 'SafeJson'
-                            //     },
-                            //     {
-                            //         module: 'good-file',
-                            //         args: ['./logs/mongo.log']
-                            //     }
-                            // ]
-                        }
-                    }
-                }
-            },
+            }
+
+            // {
+            //     plugin: {
+            //         register: 'good',
+            //         options: {
+            //             reporters: {
+            //                 console: [{
+            //                     module: 'good-squeeze',
+            //                     name: 'Squeeze',
+            //                     args: [{ 'log': '*', 'request': '*', 'response': '*', 'error': '*' }]
+            //                 }, {
+            //                     module: 'good-console'
+            //                 }, 'stdout'],
+            //                 // 'file-error': [
+            //                 //     {
+            //                 //         module: 'good-squeeze',
+            //                 //         name: 'Squeeze',
+            //                 //         args: [{ 'error': '*', 'log': 'error' }]
+            //                 //     },
+            //                 //     {
+            //                 //         module: 'good-squeeze',
+            //                 //         name: 'SafeJson'
+            //                 //     },
+            //                 //     {
+            //                 //         module: 'good-file',
+            //                 //         args: ['./logs/errors.log']
+            //                 //     }
+            //                 // ],
+            //                 'file-app': [
+            //                     {
+            //                         module: 'good-squeeze',
+            //                         name: 'Squeeze',
+            //                         args: [{ 'log': 'app' }]
+            //                     },
+            //                     {
+            //                         module: 'good-squeeze',
+            //                         name: 'SafeJson'
+            //                     },
+            //                     {
+            //                         module: 'good-file',
+            //                         args: ['./logs/app.log']
+            //                     }
+            //                 ],
+            //                 // 'file-mongo': [
+            //                 //     {
+            //                 //         module: 'good-squeeze',
+            //                 //         name: 'Squeeze',
+            //                 //         args: [{ 'log': 'mongo', request: 'mongo' }]
+            //                 //     },
+            //                 //     {
+            //                 //         module: 'good-squeeze',
+            //                 //         name: 'SafeJson'
+            //                 //     },
+            //                 //     {
+            //                 //         module: 'good-file',
+            //                 //         args: ['./logs/mongo.log']
+            //                 //     }
+            //                 // ]
+            //             }
+            //         }
+            //     }
+            // },
         ]
     }
 };
