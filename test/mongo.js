@@ -1,4 +1,3 @@
-/*
 // Deps =========================================
 const Lab = require('lab');
 const Code = require('code');
@@ -18,54 +17,76 @@ const internals = {
 internals.manifest = {
     connections: [
         {
-            labels: ['api'],
-            port: 2001,
+            port: 3000,
             host: 'localhost'
         }
     ],
-    registrations: []
+    registrations: [{ plugin: './plugins/shutdown' }, {
+        plugin: {
+            register: './plugins/db',
+            options: internals.mongo
+        }
+    }]
 };
 
 // Shortcuts ====================================
 const lab = exports.lab = Lab.script();
-const { describe, it, before } = lab;
+const { describe, it, before, after } = lab;
 const expect = Code.expect;
 
 // Mongo test ===================================
 describe('Mongo', () => {
 
-    let _server;
+    let server;
 
-    before((done) => {
+    before(done => {
 
-        Server.init(internals.manifest, internals.composeOptions, (err, server) => {
+        Server.init(internals.manifest, internals.composeOptions, (err, _server) => {
 
             expect(err).to.not.exist();
-
-            server.register({
-                register: require('~/lib/plugins/db'),
-                options: internals.mongo
-            }, (err) => {
-
-                expect(err).to.not.exist();
-                _server = server;
-                done();
-            });
+            expect(_server).to.exist();
+            server = _server;
+            done();
         });
     });
 
-    it('should have mongoose', (done) => {
+    it('has mongoose', done => {
 
-        expect(_server.plugins.db.mongoose).to.exist();
+        expect(server.plugins.db.mongoose).to.exist();
+        expect(server.plugins.db.connection).to.exist();
         done();
     });
 
-    it('should disconnect mongoose', (done) => {
+    it('disconnect mongoose', done => {
 
         // TODO: should check if loggin disconnect
         // will do this after the logging mechanism is in place
-        _server.plugins.db.stop(false);
+        server.plugins.db.stop(false, () => {
+
+            done();
+        });
+    });
+
+    // it('handle wrong configuration', done => {
+
+    //     mongoPlug.register.attributes.name = 'stub-db';
+
+    //     server.register({
+    //         register: mongoPlug,
+    //         options: {
+    //             port: 'string when should be a number'
+    //         }
+    //     }, (err) => {
+
+    //         expect(err).to.exist();
+    //         expect(err.name).to.equal('ValidationError');
+    //         done();
+    //     });
+    // });
+
+    after((done) => {
+
+        server.stop();
         done();
     });
 });
-*/

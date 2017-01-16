@@ -20,23 +20,22 @@ const internals = {
         ],
         registrations: [
             { plugin: './plugins/heartbeat' },
-            { plugin: './plugins/version' },
-            { plugin: './plugins/shutdown' }
+            { plugin: './plugins/version' }
         ]
     }
 };
 
 // Shortcuts ====================================
 const lab = exports.lab = Lab.script();
-const { describe, it, before } = lab;
+const { describe, it, before, after } = lab;
 const expect = Code.expect;
 
 // Main Experiment ==============================
-describe('Main', () => {
+describe('Server', () => {
 
     let server;
 
-    before((done) => {
+    before(done => {
 
         Server.init(internals.manifest, internals.composeOptions, (err, _server) => {
 
@@ -46,7 +45,7 @@ describe('Main', () => {
         });
     });
 
-    it('Server can be started', (done) => {
+    it('can be started', done => {
 
         // Overriding the default connection
         internals.manifest.connections = [
@@ -65,7 +64,7 @@ describe('Main', () => {
         });
     });
 
-    it('Heartbeat check', (done) => {
+    it('heartbeat check', done => {
 
         const options = {
             method: 'GET',
@@ -79,7 +78,7 @@ describe('Main', () => {
         });
     });
 
-    it('Version check', (done) => {
+    it('version check', done => {
 
         const options = {
             method: 'GET',
@@ -94,14 +93,9 @@ describe('Main', () => {
         });
     });
 
-    it('Server can gracefully stop', (done) => {
+    after(done => {
 
-        Server.init(internals.manifest, internals.composeOptions, (err, _server) => {
-
-            expect(err).to.not.exist();
-            expect(_server).to.exist();
-            _server.stop();
-            done();
-        });
+        server.stop();
+        done();
     });
 });

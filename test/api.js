@@ -1,4 +1,3 @@
-/*
 // Deps =========================================
 const Lab = require('lab');
 const Code = require('code');
@@ -14,8 +13,7 @@ const internals = {
     manifest: {
         connections: [
             {
-                labels: ['api'],
-                port: 2002,
+                port: 3000,
                 host: 'localhost'
             }
         ],
@@ -25,37 +23,85 @@ const internals = {
 
 // Shortcuts ====================================
 const lab = exports.lab = Lab.script();
-const { describe, it, before } = lab;
+const { describe, it, before, after } = lab;
 const expect = Code.expect;
 
 // Main Experiment ==============================
-describe('Basic HTTP Tests', () => {
+describe('/users endpoint -', () => {
 
     let recordId = null;
+    let token = null;
+    let headers = null;
     let server;
+    const payload = {
+        firstName: 'Foo',
+        lastName: 'Bar',
+        email: 'random123@helloworld.com'
+    };
 
-    before((done) => {
+    before(done => {
 
         Server.init(internals.manifest, internals.composeOptions, (err, _server) => {
 
             expect(err).to.not.exist();
+            expect(_server).to.exist();
             server = _server;
+
+            const options = {
+                method: 'GET',
+                url: '/get/token'
+            };
+
+            server.inject(options, response => {
+
+                expect(response.result.status).to.equal('success');
+                token = response.result.data.token;
+                headers = { 'Authorization': `Bearer ${ token }` };
+                done();
+            });
+        });
+    });
+
+    it('should require authentication', done => {
+
+        const options = {
+            payload,
+            method: 'POST',
+            url: '/user'
+        };
+
+        server.inject(options, response => {
+
+            expect(response.result.status).to.equal('fail');
+            expect(response.result.statusCode).to.equal(401);
             done();
         });
     });
 
-    it('POST create a new record', (done) => {
+    it('GET all records', done => {
 
         const options = {
-            method: 'POST',
-            url: '/home',
-            payload: {
-                name: 'Luis Matute',
-                description: 'awesome test'
-            }
+            method: 'GET',
+            url: '/users'
         };
 
-        server.inject(options, (response) => {
+        server.inject(options, response => {
+
+            expect(response.result.status).to.equal('success');
+            expect(response.result.data).to.be.an.array();
+            done();
+        });
+    });
+
+    it('POST create a new record', done => {
+
+        const options = {
+            payload, headers,
+            method: 'POST',
+            url: '/user'
+        };
+
+        server.inject(options, response => {
 
             expect(response.result.status).to.equal('success');
             recordId = response.result.data._id;
@@ -63,14 +109,15 @@ describe('Basic HTTP Tests', () => {
         });
     });
 
-    it('GET all records', (done) => {
+    it('GET top 10 records', done => {
 
         const options = {
+            headers,
             method: 'GET',
-            url: '/homes'
+            url: '/users/10'
         };
 
-        server.inject(options, (response) => {
+        server.inject(options, response => {
 
             expect(response.result.status).to.equal('success');
             expect(response.result.data).to.be.an.array();
@@ -78,29 +125,15 @@ describe('Basic HTTP Tests', () => {
         });
     });
 
-    it('GET top 10 records', (done) => {
+    it('GET created record', done => {
 
         const options = {
+            headers,
             method: 'GET',
-            url: '/homes/10'
+            url: `/user/${recordId}`
         };
 
-        server.inject(options, (response) => {
-
-            expect(response.result.status).to.equal('success');
-            expect(response.result.data).to.be.an.array();
-            done();
-        });
-    });
-
-    it('GET created record', (done) => {
-
-        const options = {
-            method: 'GET',
-            url: `/home/${recordId}`
-        };
-
-        server.inject(options, (response) => {
+        server.inject(options, response => {
 
             expect(response.result.status).to.equal('success');
             expect(response.result.data).to.have.length(1);
@@ -108,37 +141,76 @@ describe('Basic HTTP Tests', () => {
         });
     });
 
-    it('PUT created record', (done) => {
+    it('GET fail getting record', done => {
 
         const options = {
+            headers,
+            method: 'GET',
+            url: '/user/587b8119586eb2ce7f184123'
+        };
+
+        server.inject(options, response => {
+
+            expect(response.result.status).to.equal('fail');
+            expect(response.result.statusCode).to.equal(404);
+            done();
+        });
+    });
+
+    it('PUT created record', done => {
+
+        const options = {
+            headers,
             method: 'PUT',
-            url: '/home',
+            url: '/user',
             payload: {
                 _id: recordId,
-                name: 'Maria Guardado',
-                description: 'Some randome text'
+                firstName: 'Bar',
+                lastName: 'Foo'
             }
         };
 
-        server.inject(options, (response) => {
+        server.inject(options, response => {
 
             expect(response.result.status).to.equal('success');
             done();
         });
     });
 
-    it('DELETE created record', (done) => {
+    it('DELETE created record', done => {
 
         const options = {
+            headers,
             method: 'DELETE',
-            url: `/home/${recordId}`
+            url: `/user/${recordId}`
         };
 
-        server.inject(options, (response) => {
+        server.inject(options, response => {
 
             expect(response.result.status).to.equal('success');
             done();
         });
     });
+
+    it('DELETE fail', done => {
+
+        const options = {
+            headers,
+            method: 'DELETE',
+            url: '/user/587b8119586eb2ce7f184123'
+        };
+
+        server.inject(options, response => {
+
+            expect(response.result.status).to.equal('fail');
+            expect(response.result.statusCode).to.equal(404);
+            done();
+        });
+    });
+
+    after(done => {
+
+        server.stop();
+        done();
+    });
 });
-*/
