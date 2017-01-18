@@ -1,1 +1,2 @@
-## Skeleton for the 4 piso apps
+# hapi-skeleton
+HapiJS boilerplate I use for my projects
