@@ -1,12 +1,8 @@
 # hapi-skeleton
 > HapiJS boilerplate for my projects
 
-## Installing / Getting started
+### Installing / Getting started
 
-* [hapi](https://hapijs.com/) - A rich framework for building applications and services
-
-
-### Quick Start
 ```bash
 $ git clone https://github.com/pipa/hapi-skeleton.git
 $ cd hapi-skeleton
