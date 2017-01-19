@@ -60,6 +60,7 @@ List of third-party plugin dependencies used:
 |   |   ├── index.js        * Gets all files in directory and creates a structure to access the files
 |   |   └── user.js         * Returns an array with the routes for users
 |   └── index.js            * Glue compose and server(s) startup
+├── logs/                   * Logs will be generated to this directory
 ├── test/
 |   ├── coverage.html       * Webpage auto-generated when doing `npm test`
 |   ├── index.js            * Basic Server tests
