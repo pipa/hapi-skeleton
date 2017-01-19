@@ -1,22 +1,19 @@
 # hapi-skeleton
+> HapiJS boilerplate for my projects
 
-HapiJS boilerplate starting point for my projects
-
-### Built With
+## Installing / Getting started
 
 * [hapi](https://hapijs.com/) - A rich framework for building applications and services
 
 
-### Usage
-
-Just clone the repo:
+### Quick Start
 ```bash
 $ git clone https://github.com/pipa/hapi-skeleton.git
 $ cd hapi-skeleton
 $ npm install
 ```
-and start coding!
 
+Now you're ready to start coding!
 
 To run the app:
 ```bash
@@ -30,34 +27,52 @@ $ npm test
 
 ### Plugins
 
+Hapi lets you organize everything into plugins. This allows to easily break your application up into isolated pieces and reusable modules(routes, auth, DB connections, etc.).
+
+List of third-party plugin dependencies used:
 - **glue** - Server composer for hapi.js. https://github.com/hapijs/glue
+- **hapi-boom-jsend** - I like my JSON responses standardized, this is a wrapper for the [JSend](https://labs.omniti.com/labs/jsend) standard using boom. https://github.com/selfcontained/hapi-boom-jsend
+- **vision** - Templates rendering plugin support for hapi.js. https://github.com/hapijs/vision
+- **inert** - Static file and directory handlers plugin for hapi.js. https://github.com/hapijs/inert
+- **scooter** - Scooter is a User-agent information plugin for hapi. https://github.com/hapijs/scooter
+- **yar** - A hapi session plugin and cookie jar. https://github.com/hapijs/yar
+- **lout** - API documentation generator for hapi. https://github.com/hapijs/lout
 
 ### Project Structure
 ```
 .
 ├── lib/
 |   ├── controllers/
+|   |   ├── base.js         * Base Class controller that handles CRUD
+|   |   └── user.js         * User controller inherits from ./base.js - When doing an API -
 |   ├── model/
+|   |   └── user.js         * User model with mongoose
 |   ├── plugins/
+|   |   ├── auth.js         * Basic auth setup done with JWT
+|   |   ├── db.js           * Connection with MongoDB usign mongoose
+|   |   ├── heartbeat.js    * Sample handler
+|   |   ├── madero.js       * Logging handling. (outputs key=value pairs **Not JSON**)
+|   |   ├── mailer.js       * Plugin used to send emails
+|   |   ├── router.js       * Adds all routes found in `/lib/routes/*.js`
+|   |   ├── shutdown.js     * Gracefully handle shutdowns
+|   |   └── version.js      * Sample handler
 |   ├── routes/
-|   |   └── home.js   * Sample handler
-|   └── index.js      * REST routes
+|   |   ├── index.js        * Gets all files in directory and creates a structure to access the files
+|   |   └── user.js         * Returns an array with the routes for users
+|   └── index.js            * Glue compose and server(s) startup
 ├── test/
-|   └── api.js        * API test
+|   ├── coverage.html       * Webpage auto-generated when doing `npm test`
+|   ├── index.js            * Basic Server tests
+|   ├── mongo.js            * Mongo connections test
+|   └── user.js             * Test /user* endpoints
 ├── .babelrc
 ├── .eslintrc
 ├── .eslintignore
-├── index.js         * Server definition (uses the Glue plugin to read a manifest)
-├── config.js           * Auth strategies
+├── index.js                * Server bootstrapping (kickstarts Glue by sending a manifest) - helpful for testing purposes -
+├── config.js               * Auth strategies
 └── package.json
 ```
 
 ### License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-### Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc

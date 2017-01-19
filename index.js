@@ -26,7 +26,7 @@ Server.init(Config.get('/manifest'), internals.options, (err, server) => {
         rootPath: __dirname
     };
 
-    // logging start server
+    //== Logging start server
     server.log(['app', 'start'], {
         desc: `${ Pkg.name.toUpperCase() } server started`,
         host: server.info.host,
