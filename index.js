@@ -14,7 +14,7 @@ const internals = {
 Server.init(Config.get('/manifest'), internals.options, (err, server) => {
 
     if (err) {
-        server.log(['error', 'app', 'start'], {
+        server.log(['error', 'server', 'start'], {
             desc: `${ Pkg.name.toUpperCase() } could not be started`,
             err
         });
@@ -27,9 +27,8 @@ Server.init(Config.get('/manifest'), internals.options, (err, server) => {
     };
 
     //== Logging start server
-    server.log(['app', 'start'], {
-        desc: `${ Pkg.name.toUpperCase() } server started`,
-        host: server.info.host,
+    server.log(['server', 'start'], {
+        msg: `${ Pkg.name.toUpperCase() } server started`,
         port: server.info.port,
         protocol: server.info.protocol,
         uri: server.info.uri,

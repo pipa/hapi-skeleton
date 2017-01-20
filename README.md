@@ -46,12 +46,11 @@ List of third-party plugin dependencies used:
 |   ├── plugins/
 |   |   ├── auth.js         * Basic auth setup done with JWT
 |   |   ├── db.js           * Connection with MongoDB usign mongoose
-|   |   ├── heartbeat.js    * Sample handler
+|   |   ├── heartbeat.js    * HapiJS heartbeat signal
 |   |   ├── madero.js       * Logging handling. (outputs key=value pairs **Not JSON**)
 |   |   ├── mailer.js       * Plugin used to send emails
 |   |   ├── router.js       * Adds all routes found in `/lib/routes/*.js`
-|   |   ├── shutdown.js     * Gracefully handle shutdowns
-|   |   └── version.js      * Sample handler
+|   |   └── shutdown.js     * Gracefully handle shutdowns
 |   ├── routes/
 |   |   ├── index.js        * Gets all files in directory and creates a structure to access the files
 |   |   └── user.js         * Returns an array with the routes for users

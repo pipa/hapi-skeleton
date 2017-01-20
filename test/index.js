@@ -19,8 +19,7 @@ const internals = {
             }
         ],
         registrations: [
-            { plugin: './plugins/heartbeat' },
-            { plugin: './plugins/version' }
+            { plugin: './plugins/heartbeat' }
         ]
     }
 };
@@ -74,21 +73,6 @@ describe('Server', () => {
         server.inject(options, (response) => {
 
             expect(response.statusCode).to.equal(200);
-            done();
-        });
-    });
-
-    it('version check', done => {
-
-        const options = {
-            method: 'GET',
-            url: '/version'
-        };
-
-        server.inject(options, (response) => {
-
-            expect(response.statusCode).to.equal(200);
-            expect(response.result.version).to.equal(Pkg.version);
             done();
         });
     });

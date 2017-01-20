@@ -71,7 +71,6 @@ internals.config = {
             { plugin: './plugins/router' },
             { plugin: './plugins/mailer' },
             { plugin: './plugins/shutdown' },
-            { plugin: './plugins/version' },
             { plugin: './plugins/auth' },
             {
                 plugin: {
