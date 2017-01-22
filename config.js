@@ -19,6 +19,7 @@ const internals = {
 // Config =======================================
 internals.config = {
     root: __dirname,
+    env: internals.defaults.env,
     database: {
         mongodb: internals.mongo
     },
@@ -72,14 +73,7 @@ internals.config = {
             { plugin: './plugins/mailer' },
             { plugin: './plugins/shutdown' },
             { plugin: './plugins/auth' },
-            {
-                plugin: {
-                    register: './plugins/madero',
-                    options: {
-                        types: ['info', 'database', 'error', 'server', 'warning', 'request']
-                    }
-                }
-            },
+            { plugin: './plugins/madero' },
             {
                 plugin: {
                     register: 'yar',
@@ -101,12 +95,12 @@ internals.config = {
                     }
                 }
             },
-            // {
-            //     plugin: {
-            //         register: './plugins/db',
-            //         options: internals.mongo
-            //     }
-            // }
+            {
+                plugin: {
+                    register: './plugins/db',
+                    options: internals.mongo
+                }
+            }
         ]
     }
 };
