@@ -9,9 +9,26 @@ const internals = {
     },
     mongo: {
         db: 'skeleton',
-        host: 'localhost',
-        port: 27017,
-        mongoOptions: {}
+        // connections: [
+        //     {
+        //         host: 'hostname.com',
+        //         port: 12345,
+        //     },
+        //     {
+        //         host: 'hostname2.com',
+        //         port: 12345,
+        //     }
+        // ],
+        connections: {
+            host: 'localhost',
+            port: 27017,
+        },
+        mongoOptions: {
+            // user: 'user',           // auth
+            // pass: 'password',       // auth
+            // mongos: {}              // required when multiple-mongos
+            // replset: {}             // when a ReplSet is needed
+        }
     },
     store: null
 };
