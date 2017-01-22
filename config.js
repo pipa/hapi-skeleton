@@ -11,21 +11,21 @@ const internals = {
         db: 'skeleton',
         // connections: [
         //     {
-        //         host: 'hostname.com',
-        //         port: 12345,
+        //         host: 'aws-us-east-1-portal.12.dblayer.com',
+        //         port: 15324,
         //     },
         //     {
-        //         host: 'hostname2.com',
-        //         port: 12345,
+        //         host: 'aws-us-east-1-portal.15.dblayer.com',
+        //         port: 15324,
         //     }
         // ],
         connections: {
-            host: 'localhost',
-            port: 27017,
+            host: 'mongodb01.flukyfactory.com',
+            port: 49151,
         },
         mongoOptions: {
             // user: 'user',           // auth
-            // pass: 'password',       // auth
+            // pass: 'pass',           // auth
             // mongos: {}              // required when multiple-mongos
             // replset: {}             // when a ReplSet is needed
         }
