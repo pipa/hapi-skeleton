@@ -1,6 +1,12 @@
 # hapi-skeleton
 > HapiJS boilerplate for my projects
 
+[![Build Status](https://travis-ci.org/pipa/hapi-skeleton.svg?branch=master)](https://travis-ci.org/pipa/hapi-skeleton)
+[![Dependencies Status](https://david-dm.org/pipa/hapi-skeleton.svg)](https://david-dm.org/pipa/hapi-skeleton)
+
+<!--
+### Introduction
+-->
 ### Installing / Getting started
 
 ```bash

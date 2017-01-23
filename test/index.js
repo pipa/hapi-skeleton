@@ -3,7 +3,6 @@ const Lab = require('lab');
 const Code = require('code');
 const Server = require('~/lib');
 const Path = require('path');
-const Pkg = require('~/package.json');
 
 // Internals ====================================
 const internals = {

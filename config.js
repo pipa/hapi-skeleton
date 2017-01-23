@@ -20,8 +20,10 @@ const internals = {
         //     }
         // ],
         connections: {
-            host: 'mongodb01.flukyfactory.com',
-            port: 49151,
+            // host: 'mongodb01.flukyfactory.com',
+            // port: 49151,
+            host: 'localhost',
+            port: 27017
         },
         mongoOptions: {
             // user: 'user',           // auth

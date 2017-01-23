@@ -62,6 +62,7 @@ describe('/users endpoint -', () => {
         });
     });
 
+    // #1
     it('should require authentication', done => {
 
         const options = {
@@ -78,6 +79,7 @@ describe('/users endpoint -', () => {
         });
     });
 
+    // #2
     it('GET all records', done => {
 
         const options = {
@@ -93,6 +95,7 @@ describe('/users endpoint -', () => {
         });
     });
 
+    // #3
     it('POST create a new record', done => {
 
         const options = {
@@ -109,6 +112,7 @@ describe('/users endpoint -', () => {
         });
     });
 
+    // #4
     it('GET top 10 records', done => {
 
         const options = {
@@ -125,6 +129,7 @@ describe('/users endpoint -', () => {
         });
     });
 
+    // #5
     it('GET created record', done => {
 
         const options = {
@@ -141,6 +146,7 @@ describe('/users endpoint -', () => {
         });
     });
 
+    // #6
     it('GET fail getting record', done => {
 
         const options = {
@@ -157,6 +163,7 @@ describe('/users endpoint -', () => {
         });
     });
 
+    // #7
     it('PUT created record', done => {
 
         const options = {
@@ -177,6 +184,7 @@ describe('/users endpoint -', () => {
         });
     });
 
+    // #8
     it('DELETE created record', done => {
 
         const options = {
@@ -192,6 +200,7 @@ describe('/users endpoint -', () => {
         });
     });
 
+    // #9
     it('DELETE fail', done => {
 
         const options = {
