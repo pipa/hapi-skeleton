@@ -5,7 +5,9 @@ const Pkg = require('~/package.json');
 // Internals ====================================
 const internals = {
     defaults: {
+        /* $lab:coverage:off$ */
         env: process.env.NODE_ENV || 'dev'
+        /* $lab:coverage:on$ */
     },
     mongo: {
         db: 'skeleton',
@@ -22,12 +24,14 @@ const internals = {
         connections: {
             // host: 'mongodb01.flukyfactory.com',
             // port: 49151,
+            // host: 'ds127949.mlab.com',
+            // port: 27949
             host: 'localhost',
             port: 27017
         },
         mongoOptions: {
-            // user: 'user',           // auth
-            // pass: 'pass',           // auth
+            // user: 'pipa',           // auth
+            // pass: 'pipa'            // auth
             // mongos: {}              // required when multiple-mongos
             // replset: {}             // when a ReplSet is needed
         }

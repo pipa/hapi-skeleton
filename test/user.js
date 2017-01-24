@@ -217,6 +217,23 @@ describe('/users endpoint -', () => {
         });
     });
 
+    // #10
+    it('Error getting invalid user', done => {
+
+        const options = {
+            headers,
+            method: 'GET',
+            url: '/user/test'
+        };
+
+        server.inject(options, response => {
+
+            expect(response.result.status).to.equal('fail');
+            expect(response.result.statusCode).to.equal(400);
+            done();
+        });
+    });
+
     after(done => {
 
         server.stop();
