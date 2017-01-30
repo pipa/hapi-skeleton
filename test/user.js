@@ -4,6 +4,7 @@ const Code = require('code');
 const Server = require('~/lib');
 const Path = require('path');
 const Config = require('~/config');
+const shortid = require('shortid');
 
 // Internals ====================================
 const internals = {
@@ -36,7 +37,7 @@ describe('/users endpoint -', () => {
     const payload = {
         firstName: 'Foo',
         lastName: 'Bar',
-        email: 'random123@helloworld.com'
+        email: `random${ shortid.generate() }@helloworld.com`
     };
 
     before(done => {

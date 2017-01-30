@@ -94,7 +94,6 @@ internals.config = {
             { plugin: './plugins/heartbeat' },
             { plugin: './plugins/router' },
             { plugin: './plugins/mailer' },
-            { plugin: './plugins/shutdown' },
             { plugin: './plugins/auth' },
             { plugin: './plugins/madero' },
             {
