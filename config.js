@@ -77,7 +77,7 @@ internals.config = {
                 port: {
                     $filter: 'env',
                     prd: 8000,
-                    $default: 1806
+                    $default: 1807
                 },
                 host: {
                     $filter: 'env',
