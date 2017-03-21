@@ -1,0 +1,20 @@
+/*
+// Subscriber Component
+// ------------------------------------------------ */
+
+//==== Base ====//
+  .subscribe-box {
+    h4 {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      // color: color(blue);
+      text-align: center;
+    }
+    form {
+      padding: 2rem 1rem;
+
+      &::before { transform: rotate(-2deg); }
+    }
+    .form-label { font-size: 1.3rem; }
+    .action-btns { margin-top: 3rem; }
+  }

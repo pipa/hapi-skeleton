@@ -1,0 +1,113 @@
+/*
+// Site's Footer
+// ------------------------------------------------ */
+
+//==== Base ====//
+  .main-footer {
+    position: relative;
+    z-index: map-get($z-layers, after);
+    padding-bottom: 2.3rem;
+    text-align: center;
+
+    h6 {
+      width: 100%;
+      font-family: $font-din-bold;
+      color: color(grey, lighter-1);
+    }
+    small {
+      width: 100%;
+      margin-top: 8rem;
+      font: bold 1rem/1.6rem $font-arial;
+      color: color(grey, lighter-2);
+    }
+    .main-menu {
+      width: 100%;
+
+      .main-logo,
+      .main-cart { display: none; }
+      a {
+        display: block;
+
+        @include respond-to(large) {
+          display: inline-block;
+        }
+      }
+    }
+    .footer-logo {
+      position: relative;
+      width: 28rem;
+      padding: .8rem 0;
+      margin: 0 auto 4.2rem;
+      display: block;
+      background: color(blue, darker-2);
+
+      img {
+        width: 70%;
+        margin: 0 auto;
+      }
+      &::before,
+      &::after {
+        position: absolute;
+        z-index: -1;
+        padding: 1rem;
+        display: block;
+        content: '';
+      }
+      &::before {
+        top: -10%;
+        left: -6%;
+        width: 112%;
+        height: 120%;
+        background: color(green, lighter-1);
+        transform: rotate(-1deg);
+      }
+      &::after {
+        top: -3%;
+        left: -3%;
+        width: 106%;
+        height: 106%;
+        background: color(orange);
+        transform: rotate(5deg);
+      }
+      @include respond-to(xlarge) {
+        width: 37rem;
+      }
+    }
+    .footer-social {
+      nav {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+//==== Generic Footer ====//
+  .gen-footer {
+    position: relative;
+    margin: 8rem auto -6rem;
+    min-height: 15rem;
+    background: #11b39f url('#{map-get($path, img)}/global/img.bg-beach-water.jpg') top center no-repeat;
+    background-size: cover;
+
+    .cruise-btn {
+      position: absolute;
+      top: -4rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include respond-to(large) {
+        top: -7rem;
+      }
+    }
+  }
+
+//==== Related tours footer ====//
+  .related-tours {
+    .tour-item {
+      margin: 1rem;
+    }
+    h3 {
+      font: 4rem/1 $font-trash;
+      text-align: center;
+    }
+  }

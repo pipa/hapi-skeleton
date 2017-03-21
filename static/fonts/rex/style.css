@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'rex';
+  src:
+    url('fonts/rex.ttf?s80j4w') format('truetype'),
+    url('fonts/rex.woff?s80j4w') format('woff'),
+    url('fonts/rex.svg?s80j4w#rex') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'rex' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-print:before {
+  content: "\f02f";
+}
+.icon-credit-card:before {
+  content: "\f09d";
+}
+.icon-cc-visa:before {
+  content: "\f1f0";
+}
+.icon-cc-mastercard:before {
+  content: "\f1f1";
+}
+.icon-cc-discover:before {
+  content: "\f1f2";
+}
+.icon-cc-amex:before {
+  content: "\f1f3";
+}
+.icon-cc-jcb:before {
+  content: "\f24b";
+}
+.icon-cc-diners-club:before {
+  content: "\f24c";
+}
+.icon-filter:before {
+  content: "\e90e";
+}
+.icon-cart-2:before {
+  content: "\e90d";
+}
+.icon-watch:before {
+  content: "\e907";
+}
+.icon-calendar:before {
+  content: "\e908";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-google-plus:before {
+  content: "\f0d5";
+}
+.icon-tripadvisor:before {
+  content: "\f262";
+}
+.icon-close:before {
+  content: "\e90a";
+}
+.icon-list:before {
+  content: "\e90b";
+}
+.icon-grid:before {
+  content: "\e90c";
+}
+.icon-cruise:before {
+  content: "\e900";
+}
+.icon-compass:before {
+  content: "\e904";
+}
+.icon-pin:before {
+  content: "\e901";
+}
+.icon-chat:before {
+  content: "\e902";
+}
+.icon-cart:before {
+  content: "\e903";
+}
+.icon-settings:before {
+  content: "\e8b8";
+}
+.icon-shipping:before {
+  content: "\e558";
+}
+.icon-person:before {
+  content: "\e7fd";
+}
+.icon-heart:before {
+  content: "\e905";
+}
+.icon-bag:before {
+  content: "\e906";
+}
+.icon-badge-id:before {
+  content: "\e85e";
+}
+.icon-search:before {
+  content: "\e8b6";
+}
+.icon-package:before {
+  content: "\e909";
+}
+

@@ -1,0 +1,63 @@
+/**
+ * Master Stylings for Roatan Excursions
+ * Aug 16
+ * Authors:
+ *  Luis Matute
+ *  Adolfo Gutierrez
+ *  Baudilio Barahona
+ */
+
+// Images naming convention
+// [component].[function-description].[filetype]
+
+// Abstracts
+@import
+  'abstracts/colors',
+  'abstracts/functions',
+  'abstracts/variables',
+  'abstracts/mixins',
+  'abstracts/utils';
+
+// Vendors
+@import
+  'vendors/sweetalert',
+  'vendors/react-datepicker/datepicker',
+  'vendors/slick/slick',
+  'vendors/slick/slick-theme';
+
+// Base
+@import
+  'base/normalize',
+  'base/base',
+  'base/fonts',
+  'base/icons',
+  'base/typography';
+
+// Layout
+@import
+  'layout/grid',
+  'layout/header',
+  'layout/footer';
+
+// Components
+@import
+  'components/animations',
+  'components/brush-clipping',
+  'components/range-slider',
+  'components/buttons',
+  'components/buttons-group',
+  'components/forms',
+  'components/cards',
+  'components/modal',
+  'components/tours',
+  'components/qq',
+  'components/subscriber';
+
+// Pages
+@import
+  'pages/home',
+  'pages/tours',
+  'pages/contact',
+  'pages/about',
+  'pages/cart',
+  'pages/cruises';

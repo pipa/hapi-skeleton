@@ -1,0 +1,124 @@
+/*
+// Variables
+// ------------------------------------------------ */
+
+/*==== Paths ====*/
+$assets-path           : '/static';
+$path: (
+  img                  : '#{$assets-path}/img',
+  fonts                : '#{$assets-path}/fonts',
+  svg                  : '#{$assets-path}/svg'
+);
+
+/*==== Scafolding ====*/
+$body-bg               : #f0ede5 url('#{map-get($path, img)}/global/body.bg-fabric.jpg') top left repeat !default;
+$link-color            : color(green) !default;
+$link-hover-color      : darken($link-color, 15%) !default;
+$link-hover-decoration : none !default;
+
+$spacer                : 1rem !default;
+$radius: (
+  sm                   : .3rem,
+  md                   : .5rem,
+  lg                   : 1rem
+);
+
+$z-layers: (
+  bottomless-pit       : -9999,
+  before               : 0,
+  default              : 1,
+  after                : 2,
+  header               : 10,
+  dropdown             : 3000,
+  overlay              : 4000,
+  modal                : 4001,
+  drama                : 9999
+);
+
+$transition-duration   : .3s;
+
+//==== Components ====//
+$padding: (
+  base: (
+    vertical           : 6px,
+    horizontal         : 12px
+  ),
+  lg: (
+    vertical           : 10px,
+    horizontal         : 16px
+  ),
+  md: (
+    vertical           : 7px,
+    horizontal         : 14px
+  ),
+  sm: (
+    vertical           : 5px,
+    horizontal         : 10px
+  ),
+  xs: (
+    vertical           : 1px,
+    horizontal         : 5px
+  )
+);
+
+//==== Forms ====//
+$input-padding-x       : 1rem !default;
+$input-padding-y       : .8rem !default;
+$input-line-height     : 1.25 !default;
+
+/*==== Typography ====*/
+$font-cache            : 'v=#{unique-id()}';
+$font-icons-name       : 'rex';
+$font-dimbo-name       : 'DimboRegular';
+$font-din-bold-name    : 'DINPro-Bold';
+$font-din-med-name     : 'DINPro-Medium';
+$font-din-reg-name     : 'DINPro-Regular';
+$font-trash-hand-name  : 'TrashHand';
+$font-icons            : $font-icons-name, Helvetica, sans-serif !default;
+$font-dimbo            : $font-dimbo-name, Helvetica, sans-serif !default;
+$font-din-bold         : $font-din-bold-name, Helvetica, sans-serif !default;
+$font-din-md           : $font-din-med-name, Helvetica, sans-serif !default;
+$font-din-reg          : $font-din-reg-name, Helvetica, sans-serif !default;
+$font-trash            : $font-trash-hand-name, Helvetica, sans-serif !default;
+$font-arial            : Arial, Helvetica, sans-serif !default;
+$font-base             : $font-din-reg !default;
+$font-color            : color(grey, lighter-1) !default;
+$font-weight           : 400 !default;
+$font-size             : 1.5rem !default;
+$line-height           : 2rem !default;
+
+$font-size-h1          : 1rem !default;
+$font-size-h2          : 9rem !default;
+$font-size-h3          : 5rem !default;
+$font-size-h4          : 3.5rem !default;
+$font-size-h5          : 1.7rem !default;
+$font-size-h6          : 1.4rem !default;
+
+$headings-margin       : (1rem / 2) !default;
+$headings-font-family  : inherit !default;
+$headings-font-weight  : 500 !default;
+$headings-line-height  : 1.1 !default;
+$headings-color        : inherit !default;
+
+/*==== Breakpoints ====*/
+$breakpoints: (
+  xsmall               : 320px,
+  small                : 375px,
+  medium               : 425px,
+  large                : 768px, // tablet
+  xlarge               : 1024px, // desktop
+  xxl                  : 1400px
+);
+
+/*==== Grid System ====*/
+$width-xs              : 30 !default;
+$width-sm              : 48 !default;
+$width-md              : 62 !default;
+$width-lg              : 75 !default;
+$width-xl              : 80 !default;
+
+$viewport-xs           : map-get($breakpoints, xsmall) !default;
+$viewport-sm           : map-get($breakpoints, small) !default;
+$viewport-md           : map-get($breakpoints, medium) !default;
+$viewport-lg           : map-get($breakpoints, large) !default;
+$viewport-xl           : map-get($breakpoints, xlarge) !default;

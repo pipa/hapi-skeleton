@@ -1,0 +1,217 @@
+/*
+// Tours Styles
+// ------------------------------------------------ */
+
+//==== Tours index =====//
+  .vw-tours {
+    h1 {
+      padding: 3rem 0 1rem;
+      font: 7rem/1 $font-trash;
+      color: color(blue,default);
+      text-align: center;
+    }
+    .tour-list {
+      margin-top: 3rem;
+    }
+    .fltr-wrap {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+    .more-options {
+      width: 100%;
+      line-height: 1;
+      border-radius: .5rem .5rem 0 0;
+
+      &:active, &:focus {
+        background: color(black, lighter-1);
+      }
+    }
+    .opt-group p { font-size: 1.5rem;margin: .5rem 0; }
+    .close-options {
+      position: absolute;
+      top: .3rem;
+      right: 1rem;
+      font-size: 4rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .options {
+      position: absolute;
+      top: 3.83rem;
+      left: .5rem;
+      z-index: z(after);
+      width: 97%;
+      padding: 2.5rem 2rem;
+      font-size: 1.8rem;
+      font-family: $font-arial;
+      font-weight: bold;
+      background: color(black, lighter-1);
+      color: white;
+      border-radius: 0 .5rem .5rem .5rem;
+      box-shadow: 0rem 3rem 5.8rem -2rem rgba(0,0,0,0.5);
+
+      @include respond-to(medium) {
+        width: 98.6%;
+      }
+
+      ul {
+        margin-bottom: 2rem;
+        padding: 0.8rem;
+        border-radius: .5rem;
+        background: color(black, lighter-2);
+      }
+    }
+    label {
+      color: white;
+      font-size: 2rem;
+      text-transform: capitalize;
+
+      @include respond-to-max(large) {
+        font-size: 1.4rem;
+      }
+    }
+    .no-matches {
+      width: 100%;
+      height: 6rem;
+      text-align: center;
+      margin: 3rem auto;
+      font-size: 2rem;
+    }
+    .tumbleweed {
+      position: relative;
+      display: block;
+      width: 6.5rem;
+      height: auto;
+      margin: 0 auto;
+      transform: rotate(0deg);
+      animation: tumbleweed 1.5s linear infinite;
+    }
+    .search-wrap {
+      position: relative;
+    }
+    .icon-search-wrap {
+      position: absolute;
+      top: 5%;
+      right: .7rem;
+      display: block;
+      width: 4.3rem;
+      height: 90%;
+      color: color(grey, lighter-2);
+      text-align: center;
+      vertical-align: middle;
+      border-radius: .5rem;
+
+      i {
+        vertical-align: baseline;
+        font-size: 3rem;
+        line-height: 2.5rem;
+      }
+    }
+    .result-count {
+      font-size: 2rem;
+      text-transform: uppercase;
+      padding: 1rem;
+
+      span {
+        font-size: 3rem;
+        color: color(blue);
+      }
+    }
+    .view-options {
+      button {
+        border-color: color(blue);
+        color: color(grey, lighter-1);
+        border-radius: .5rem;
+
+        i {color: color(blue);}
+
+        &:hover, &:active, &.active {
+          background: color(blue, lighter-2);
+          color: white;
+
+          i {color: white;}
+        }
+      }
+    }
+    .price-picker {
+      height: 6rem;
+    }
+    .actions-wrap {margin: 2rem 0 0;}
+    .actions.btn-black {
+      background: color(black, lighter-2);
+
+      &:hover, &:active {background: color(black);}
+    }
+    .tours-list {
+      text-align: center;
+      padding-top: 2rem;
+    }
+    .tour-item {
+      display: inline-block;
+      vertical-align: top;
+      width: 21rem;
+      margin: 1rem;
+      text-align: center;
+
+      &.grid {
+        @include respond-to-max(medium) {
+          width: 14rem;
+          height: 20rem;
+          margin: .15rem;
+
+          .tour-img { height: 12.6rem; }
+        }
+      }
+    }
+    // TODO: this? goes here or _forms?
+    // input[type="checkbox"]
+    .fltr-chbx {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      appearance: none;
+      width: 2rem;
+      height: 2rem;
+      border: .3rem solid color(gray, lighter-1);
+      border-radius: .3rem;
+      box-shadow: .3rem .3rem 1rem -.3rem rgba(0,0,0,.25), inset .3rem .3rem 1rem -.3rem rgba(0,0,0,0.25);
+
+      &:active, &:focus {
+        outline: none;
+      }
+      &:checked:after {
+        position: absolute;
+        top: 0.1rem;
+        left: 0.4rem;
+        z-index: z(after);
+        content: '';
+        display: block;
+        width: 0.55rem;
+        height: 1rem;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      &:checked:before {
+        position: absolute;
+        top: -.3rem;
+        left: -.3rem;
+        z-index: 1;
+        content: '';
+        display: block;
+        width: 143%;
+        height: 140%;
+        border-radius: .3rem;
+        background: color(blue);
+      }
+    }
+  }
+
+//==== Tours details =====//
+  .vw-tour {
+    .tour-det {
+      position: relative;
+      z-index: z(after);
+    }
+  }

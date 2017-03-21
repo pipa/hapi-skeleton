@@ -1,0 +1,17 @@
+<div class="vw-cart">
+    {{> global/gen-header title="Your Cart" icon="icon-cart-2" chatBtn=true }}
+    <section id="js-cart-view"></section>
+    <div class="related-tours under-water">
+        <div class="container">
+            <div class="row">
+                {{!-- Related Tours --}}
+                <h3 class="xs-12">You may also like these adventures:</h3>
+            </div>
+        </div>
+    </div>
+    {{> global/gen-footer-cruise }}
+</div>
+
+<script>
+    _app.addView = 'cart/index.js';
+</script>

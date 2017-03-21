@@ -1,0 +1,29 @@
+/*
+// Modals Component
+// ------------------------------------------------ */
+
+//==== Base ====//
+  .mdl-wrap {}
+
+//==== Content ====//
+  .mdl-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: z(modal);
+    max-height: 90%;
+    max-width: 90%;
+    // background: #fff;
+    transform: translate(-50%, -50%);
+  }
+
+//==== Overlay ====//
+  .mdl-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: z(overlay);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+  }

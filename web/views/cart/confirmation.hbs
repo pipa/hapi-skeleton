@@ -1,0 +1,41 @@
+<div class="vw-conf">
+    {{> global/gen-header title="Confirmation" chatBtn=true }}
+    <section class="container">
+        <h3>Your Order has Been Successful</h3>
+        <p>We will send you a confirmation to your email, please be sure to bring identification for the primary participant of your event(s).</p>
+
+		<h4>ORDER SUMMARY:</h4>
+
+		{{#each items}}
+			<div class="row tour-item">
+				<div class="desc xs-6 lg-8 card-white-transparent no-rotate">
+					<div class="row">
+						<div class="xs-3">
+							<a href="{{ tourUrl tour }}" class="tour-img" style="background-image: url({{ tour.thumbnail_image }});"></a>
+						</div>
+						<div class="info xs-8 fx-middle">
+							<div class="row">
+								<h5>{{ tour.name }}</h5>
+								<p>Primary Participant: <b class="tour-username">{{ first_name }} {{ last_name }}</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="selection fx-middle xs-6 lg-4 card-white-transparent no-rotate">
+					<div class="row">
+                        <p class="xs-12"><b>Date:</b> {{ moment selection.date format="DD/MMM/YYYY" }}</p>
+                        <p class="xs-12"><b>Participants:</b> {{ tourParticipants selection }}</p>
+                        <strong class="xs-12">Subtotal: ${{ tourTotal selection }}</strong>
+                    </div>
+				</div>
+            </div>
+		{{/each}}
+
+		<div class="row">
+			<div class="xs-offset-8 xs-4">
+				<button class="btn-blue btn-block">Print Order Summary</button>
+			</div>
+		</div>
+    </section>
+    {{> global/gen-footer-cruise }}
+</div>

@@ -1,0 +1,22 @@
+<input type="checkbox" id="menu-state" class="hide mm-trigger">
+<header class="main-header">
+    <div class="mm-content">
+        <ul class="mm-header hidden-xlarge-up">
+            <li class="item">
+                <label class="mm-btn hidden-xlarge-up" for="menu-state"><b></b><b></b></label>
+            </li>
+            <li class="item">
+                <h1 class="main-logo">
+                    <a href="/"><img src="{{ assetsPath }}/img/global/main-logo.svg" class="img-responsive" alt="{{ appName }}"></a>
+                </h1>
+            </li>
+            <li class="item">
+                <div id="js-cart"></div>
+            </li>
+        </ul>
+        {{> global/main-menu _class="mm-list" }}
+    </div>
+    <div class="container pr">
+        <div id="js-cart-ddl"></div>
+    </div>
+</header>

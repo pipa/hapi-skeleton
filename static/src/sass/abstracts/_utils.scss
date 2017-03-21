@@ -1,0 +1,76 @@
+/*
+// Utilities
+// ------------------------------------------------ */
+
+/*==== General ====*/
+  .pull-right { float: right; }
+  .pull-left { float: left; }
+  .pull-none { float: none; }
+  .clearfix {
+    &:before,
+    &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+  }
+
+/*==== Postitioning ====*/
+  .center { margin: auto auto; }
+  .txt-center { text-align: center; }
+  .txt-right  { text-align: right;  }
+  .txt-left   { text-align: left;   }
+
+/*==== Toggling content ====*/
+  .hide { display: none; }
+  .show { display: block; }
+  .invisible { visibility: hidden; }
+  .muted { opacity: .7; }
+  .no-flow {
+    position: fixed;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+  .xflow { overflow-x: scroll; -webkit-overflow-scrolling: touch; }
+  .no-flow-x { overflow-x: hidden; }
+
+/*==== Positioning ====*/
+  .affix { position: fixed; }
+  .pr { position: relative; }
+  .center { margin: auto auto; }
+
+/*==== Inline Block ====*/
+  .ib {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+/*==== Images ====*/
+  .img-responsive {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+/*==== Social ====*/
+  .social {
+    display: inherit;
+    font: 1.4rem/2.4rem $font-din-bold;
+    color: color(grey, lighter-1);
+
+    span { margin-right: .8rem; }
+    a {
+      padding: 0 .5rem;
+      font-size: 2.4rem;
+      text-align: center;
+    }
+  }
+
+/*==== Social Icons Color Classes ====*/
+  .icon-facebook { color: color(social, facebook); }
+  .icon-twitter { color: color(social, twitter); }
+  .icon-google-plus { color: color(social, gplus); }

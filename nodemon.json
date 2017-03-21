@@ -1,0 +1,5 @@
+{
+    "restartable": "rs",
+    "ignore": ["tests/**.*.js", "node_modules", "bower_components", "logs/*", "static/*"],
+    "ext": "js,json,hbs,txt,css"
+}

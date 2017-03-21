@@ -1,0 +1,47 @@
+<script>
+    // Object Assign Pollyfill
+    if (!('assign' in Object)) {
+        Object.assign = function assign(target, source) {
+
+            for (var index = 1, key, src; index < arguments.length; ++index) {
+                src = arguments[index];
+
+                for (key in src) {
+                    if (Object.prototype.hasOwnProperty.call(src, key)) {
+                        target[key] = src[key];
+                    }
+                }
+            }
+            return target;
+        };
+    }
+
+    // Application Data
+    window._app = new function() {
+
+        var self = this;
+        self.name = '{{ appName }}';
+        self.env = '{{ env }}';
+        self.section = '{{ section }}';
+        self.item = '{{ item }}';
+        self.lang = '{{ language }}';
+        self.assetsPath = '{{ assetsPath }}';
+        self.jsLibs = self.assetsPath + '/js/libs';
+        self.jsPath = self.assetsPath + '/js';
+        self.jsMain = self.jsPath + '/app.js';
+        self.jsViews = self.jsPath + '/views';
+        self.page = {};
+        self.addView = false;
+        self.recaptchaKey = '6LeuegsUAAAAAAIFk2izXbG-itvvULlmsRKfuc4h';
+        self.addData = function (newData) {
+
+            Object.assign(self.page, newData);
+        };
+        self.addScript = function (path) {
+
+            var view = document.createElement('script');
+            view.setAttribute('src', self.jsPath + '/views/' + path);
+            document.head.appendChild(view);
+        };
+    };
+</script>

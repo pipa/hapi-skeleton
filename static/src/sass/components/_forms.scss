@@ -1,0 +1,291 @@
+/*
+// Forms
+// ------------------------------------------------ */
+
+//==== Base ====//
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: $input-padding-y $input-padding-x;
+    font-size: 1.6rem;
+    line-height: $input-line-height;
+    color: color(grey);
+    background-color: color(shades, white);
+    // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid color(grey);
+    // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+    border-radius: 0;
+    box-shadow: none;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+    // Unstyle the caret on `<select>`s in IE10+.
+    &::-ms-expand {
+      background-color: transparent;
+      border: 0;
+    }
+
+    // Customize the `:focus` state to imitate native WebKit styles.
+    &:focus {
+      // color: color(grey)-focus;
+      // background-color: $input-bg-focus;
+      // border-color: $input-border-focus;
+      outline: none;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+    }
+
+    // Placeholder
+    &::placeholder,
+    &.placeholder {
+      color: lighten(color(grey, lighter-2), 20%);
+      // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+      opacity: 1;
+    }
+
+    // Disabled and read-only inputs
+    //
+    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    // disabled if the fieldset is disabled. Due to implementation difficulty, we
+    // don't honor that edge case; we style them as disabled anyway.
+    &:disabled,
+    &[readonly] {
+      background-color: color(grey);
+      // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+      opacity: 1;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  fieldset {
+    padding: 0;
+    margin: 0 0 1rem;
+    border: 0;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  select {
+    &:focus::-ms-value {
+      // Suppress the nested default white text on blue background highlight given to
+      // the selected option text when the (still closed) <select> receives focus
+      // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+      // match the appearance of the native widget.
+      // See https://github.com/twbs/bootstrap/issues/19398.
+      color: color(grey);
+      background-color: color(shades, white);
+    }
+  }
+
+//==== Labels ====//
+  label {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: inherit;
+    line-height: 1;
+    color: color(grey);
+    text-align: center;
+    vertical-align: baseline;
+
+    &.lbl-lg {
+      font-size: 100%;
+    }
+    // Empty labels collapse automatically
+    &:empty {
+      display: none;
+    }
+  }
+  .form-label {
+    font-size: 1.6rem;
+    line-height: $input-line-height;
+    text-align: left;
+
+    [type="checkbox"] {
+      margin-right: 1rem;
+    }
+  }
+
+//==== Radio ====//
+  .radio,
+  .checkbox {
+    position: relative;
+    display: block;
+    // margin-top:    ($spacer * .75);
+    margin-bottom: ($spacer * .75);
+
+    label {
+      padding-left: 1.25rem;
+      margin-bottom: 0;
+      font-weight: normal;
+      cursor: pointer;
+
+      // When there's no labels, don't position the input.
+      input:only-child {
+        position: static;
+      }
+    }
+  }
+  .radio input[type="radio"],
+  .radio-inline input[type="radio"],
+  .checkbox input[type="checkbox"],
+  .checkbox-inline input[type="checkbox"] {
+    position: absolute;
+    margin-top: .25rem;
+    // margin-top: 4px \9;
+    margin-left: -1.25rem;
+  }
+
+  .radio + .radio,
+  .checkbox + .checkbox {
+    // Move up sibling radios or checkboxes for tighter spacing
+    margin-top: -.25rem;
+  }
+
+//==== Checkbox ====//
+  .checkbox {
+    padding-left: 2rem;
+
+    b {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 1.4rem;
+      height: 1.4rem;
+      display: block;
+      border: 2px solid #727272;
+      border-radius: map-get($radius, sm);
+      transform: translateY(-50%);
+    }
+    input {
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+    }
+    input[type=checkbox]:checked + b {
+      background: color(green);
+      border-color: color(green);
+    }
+  }
+
+//==== Select ====//
+  .ddl-wrap {
+    position: relative;
+
+    select {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      height:100%;
+      opacity: 0;
+    }
+    &:hover .ddl-text {
+      box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.2);
+    }
+    &.disabled .ddl-text { opacity: 0.5; }
+  }
+  .ddl-text {
+    position: relative;
+    width: 100%;
+    padding: 1rem 4rem 1rem 1rem;
+    font: 2rem/1 $font-base;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: color(grey);
+    transition: all $transition-duration;
+
+    &:before,
+    &:after {
+      position: absolute;
+      right: 0.5rem;
+      top: 50%;
+      z-index: 1;
+      font: 3rem/1 $font-icons;
+      transform: translateY(-50%);
+    }
+  }
+
+//==== Date picker ====//
+  .qq-input {
+    position: relative;
+    width: 100%;
+    padding: 0.7rem 4rem 0.7rem 1rem;
+    font: 2rem/1 $font-base;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    background: color(grey);
+    border: 0;
+  }
+
+//==== Error ====//
+  .field-wrap {
+    position: relative;
+    margin-bottom: 1rem;
+
+    &.invalid .form-control,
+    &.invalid .ddl-mask {
+      border-color: color(red);
+    }
+    &.white {
+      background: #fff;
+      border-radius: map-get($radius, md);
+
+      .form-control {
+        background: transparent;
+      }
+    }
+    .error-msg {
+      display: block;
+      font: 1.4rem/1 $font-arial;
+      color: color(red);
+      text-align: left;
+      text-indent: 2px;
+    }
+    .form-control {
+      position: relative;
+      z-index: z(after);
+    }
+    i {
+      color: color(grey);
+    }
+    .append {
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      z-index: z(before);
+      font-size: 4rem;
+      line-height: 3rem;
+      transform: translateY(-50%);
+    }
+  }
+
+  .form-error {
+    display: block;
+    width: 100%;
+    padding: 0 1rem;
+    color: #fff;
+    text-align: left;
+    background: color(red);
+    border: 1px solid color(grey);
+    border-top: 0;
+    animation: 1s slideDown ease;
+
+    &.small {
+      padding: .3rem .5rem;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+  }

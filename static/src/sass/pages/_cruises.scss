@@ -1,0 +1,310 @@
+/*
+// Cruises Styles
+// ------------------------------------------------ */
+
+//==== Base ====//
+  .vw-crz {
+    margin-bottom: 5rem;
+
+    h3 {
+      font-size: 3.75rem;
+      font-family: $font-trash;
+      color: color(blue);
+      text-align: center;
+    }
+    .gen-header {
+      height: 9.3rem;
+
+      .img-box {
+        position: relative;
+        overflow: hidden;
+      }
+    }
+    .title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      padding: 2rem 5rem;
+      width: 100%;
+      background: url('#{map-get($path, img)}/global/brushes/text-bg.brush-blue.png') center no-repeat;
+      background-size: 120% 110%;
+      transform: translate(-50%, -50%);
+
+      small {
+        display: block;
+        margin-bottom: -20px;
+        font: 1.5rem/1 $font-din-md;
+        letter-spacing: 4px;
+      }
+      big {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+      @include respond-to(medium) {
+        width: 90%;
+      }
+      @include respond-to(large) {
+        width: auto;
+        min-width: 55rem;
+        transform: translate(-25%, -50%);
+
+        small {
+          margin-bottom: 0;
+          font-size: 2.5rem;
+          letter-spacing: 10px;
+        }
+        big {
+          font-size: 7rem;
+          line-height: 7rem;
+        }
+      }
+      @include respond-to(xlarge) {
+        top: auto;
+        bottom: 5rem;
+        transform: translateX(-20%);
+      }
+    }
+    .intro {
+      margin-top: 3rem;
+    }
+    .intro-pics {
+      position: relative;
+      min-height: 17rem;
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 4px solid #fff;
+      }
+      :nth-child(1) {
+        z-index: 3;
+        max-width: 13.5rem;
+        margin-left: -12rem;
+        transform: rotate(6deg) translate(-50%, -50%);
+      }
+      :nth-child(2) {
+        z-index: 2;
+        max-width: 12.5rem;
+        margin-top: 1rem;
+        transform: rotate(-5deg) translate(-50%, -50%);
+      }
+      :nth-child(3) {
+        z-index: 1;
+        max-width: 13rem;
+        margin-top: -1.5rem;
+        margin-left: 10rem;
+        transform: rotate(2.5deg) translate(-50%, -50%);
+      }
+    }
+    .tour-item {
+      & > div {
+        padding-right: .2rem;
+        padding-left: .2rem;
+      }
+      a {
+        font: 1.4rem/1.8rem $font-din-bold;
+        color: color(blue);
+      }
+    }
+    .card-white {
+      height: 100%;
+      padding: 1.5rem;
+
+      h5 {
+        margin: 0;
+        font: 2rem/1 $font-din-md;
+      }
+      p {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+      }
+    }
+    .mdl-wrap .container {
+      width: 100%;
+      max-height: 100%;
+      overflow-y: scroll;
+    }
+    .tour-det {
+      padding: 2rem 0;
+
+      h3 {
+        width: 100%;
+      }
+    }
+  }
+
+//==== Cruise Box ====//
+  .crz-box {
+    margin-top: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .crz-search {
+    margin-bottom: 6rem;
+    color: #fff;
+    text-align: center;
+
+    h4 {
+      color: color(blue, lighter-2);
+    }
+    span {
+      display: block;
+      margin: 0 0 .5rem;
+      font-size: 2rem;
+      color: color(blue, lighter-2);
+      text-align: left;
+
+      @include respond-to(large) {
+        margin: .5rem 0 1.5rem;
+        text-align: center;
+      }
+    }
+    p {
+      margin: 0;
+    }
+    b {
+      display: block;
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+      font: 4.75rem/60px $font-din-md;
+      border-radius: 50%;
+      background: color(blue, lighter-2);
+    }
+    .inactive {
+      opacity: .5;
+      pointer-events: none;
+    }
+    .top {
+      padding: 2rem 0 3rem;
+      margin-bottom: 5px;
+      background: color(grey);
+    }
+    .bottom {
+      position: relative;
+      padding: 3rem 0;
+      background: rgba(255, 255, 255, .5);
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0;
+        border-color: transparent;
+        transform: translateX(-50%);
+        transition: all 0.3s ease-out;
+        opacity: 0;
+        content: '';
+      }
+    }
+    &.active .bottom::after {
+      bottom: -35px;
+      border-width: 35px 35px 0 35px;
+      border-color: rgba(255, 255, 255, .5) transparent transparent transparent;
+      opacity: 1;
+    }
+    .ddl-text {
+      text-align: left;
+    }
+  }
+  .crz-results {
+    & > :first-child {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .white {
+      height: 100%;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background: #fff;
+    }
+    .date {
+      height: 100%;
+      color: #fff;
+      font-size: 1.7rem;
+      text-align: center;
+      background: color(black, lighter-1);
+    }
+    .desc {
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      li {
+        font: 1.6rem/1 $font-din-reg;
+        color: color(grey, lighter-1);
+
+        & + li { margin-top: .8rem; }
+      }
+      strong {
+        display: block;
+        font: 1.2rem/1.5rem $font-din-bold;
+      }
+    }
+    .action {
+      button {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        white-space: normal;
+      }
+    }
+    .results {
+      margin-bottom: 1rem;
+
+      .row .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+  .crz-row {
+    margin: .4rem 0;
+    opacity: .5;
+
+    & > * {
+      padding-left: .4rem;
+      padding-right: .4rem;
+
+      @include respond-to(large) {
+        padding-left: .2rem;
+        padding-right: .2rem;
+      }
+    }
+    &.active {
+      opacity: 1;
+    }
+  }
+  .crz-itin {
+    position: relative;
+    margin-bottom: 7rem;
+    padding: 2rem 0 1.4rem;
+    font: 1.7rem/1 $font-din-reg;
+    color: #fff;
+    text-align: center;
+    background: color(grey);
+
+    &::after {
+      position: absolute;
+      bottom: -52px;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 35px 35px 0 35px;
+      border-color: color(grey) transparent transparent transparent;
+      transform: translate(-50%, -50%);
+      content: '';
+    }
+    big {
+      font: 5rem/1 $font-din-reg;
+      color: color(blue);
+    }
+    p { margin: 2px 0; }
+    b {
+      font-family: $font-din-bold;
+    }
+  }

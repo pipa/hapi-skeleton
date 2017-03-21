@@ -1,0 +1,11 @@
+# roatanexcursions.com
+# The humans responsible & tech colophon
+
+# TEAM
+    Luis Matute -- Full stack dev -- @luis_matute
+
+# TECHNOLOGY
+    Last update: YYYY/MM/DD
+    Standards: HTML5, CSS3, ES6
+    Components: jQuery
+    Software: NodeJS, HapiJS

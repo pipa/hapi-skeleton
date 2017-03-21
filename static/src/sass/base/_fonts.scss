@@ -1,0 +1,75 @@
+/*
+// Font Families
+// ------------------------------------------------ */
+
+// Font Icons ===================================
+@font-face {
+    font-family: $font-icons-name;
+    src: url('#{map-get($path, fonts)}/#{$font-icons-name}/fonts/#{$font-icons-name}.eot?#{$font-cache}');
+    src: url('#{map-get($path, fonts)}/#{$font-icons-name}/fonts/#{$font-icons-name}.eot?#{$font-cache}#iefix') format('embedded-opentype'),
+         url('#{map-get($path, fonts)}/#{$font-icons-name}/fonts/#{$font-icons-name}.ttf?#{$font-cache}') format('truetype'),
+         url('#{map-get($path, fonts)}/#{$font-icons-name}/fonts/#{$font-icons-name}.woff?#{$font-cache}') format('woff'),
+         url('#{map-get($path, fonts)}/#{$font-icons-name}/fonts/#{$font-icons-name}.svg?#{$font-cache}#qcr') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Dimbo Regular ================================
+@font-face {
+    font-family: $font-dimbo-name;
+    src: url('#{map-get($path, fonts)}/#{$font-dimbo-name}/#{$font-dimbo-name}.eot?#{$font-cache}');
+    src: url('#{map-get($path, fonts)}/#{$font-dimbo-name}/#{$font-dimbo-name}.eot?#{$font-cache}#iefix') format('embedded-opentype'),
+         url('#{map-get($path, fonts)}/#{$font-dimbo-name}/#{$font-dimbo-name}.ttf?#{$font-cache}') format('truetype'),
+         url('#{map-get($path, fonts)}/#{$font-dimbo-name}/#{$font-dimbo-name}.woff?#{$font-cache}') format('woff'),
+         url('#{map-get($path, fonts)}/#{$font-dimbo-name}/#{$font-dimbo-name}.svg?#{$font-cache}#qcr') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// DIN Pro - Bold ================================
+@font-face {
+    font-family: $font-din-bold-name;
+    src: url('#{map-get($path, fonts)}/#{$font-din-bold-name}/#{$font-din-bold-name}.eot?#{$font-cache}');
+    src: url('#{map-get($path, fonts)}/#{$font-din-bold-name}/#{$font-din-bold-name}.eot?#{$font-cache}#iefix') format('embedded-opentype'),
+         url('#{map-get($path, fonts)}/#{$font-din-bold-name}/#{$font-din-bold-name}.ttf?#{$font-cache}') format('truetype'),
+         url('#{map-get($path, fonts)}/#{$font-din-bold-name}/#{$font-din-bold-name}.woff?#{$font-cache}') format('woff'),
+         url('#{map-get($path, fonts)}/#{$font-din-bold-name}/#{$font-din-bold-name}.svg?#{$font-cache}#qcr') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// DIN Pro - Medium ================================
+@font-face {
+    font-family: $font-din-med-name;
+    src: url('#{map-get($path, fonts)}/#{$font-din-med-name}/#{$font-din-med-name}.eot?#{$font-cache}');
+    src: url('#{map-get($path, fonts)}/#{$font-din-med-name}/#{$font-din-med-name}.eot?#{$font-cache}#iefix') format('embedded-opentype'),
+         url('#{map-get($path, fonts)}/#{$font-din-med-name}/#{$font-din-med-name}.ttf?#{$font-cache}') format('truetype'),
+         url('#{map-get($path, fonts)}/#{$font-din-med-name}/#{$font-din-med-name}.woff?#{$font-cache}') format('woff'),
+         url('#{map-get($path, fonts)}/#{$font-din-med-name}/#{$font-din-med-name}.svg?#{$font-cache}#qcr') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// DIN Pro - Regular ================================
+@font-face {
+    font-family: $font-din-reg-name;
+    src: url('#{map-get($path, fonts)}/#{$font-din-reg-name}/#{$font-din-reg-name}.eot?#{$font-cache}');
+    src: url('#{map-get($path, fonts)}/#{$font-din-reg-name}/#{$font-din-reg-name}.eot?#{$font-cache}#iefix') format('embedded-opentype'),
+         url('#{map-get($path, fonts)}/#{$font-din-reg-name}/#{$font-din-reg-name}.ttf?#{$font-cache}') format('truetype'),
+         url('#{map-get($path, fonts)}/#{$font-din-reg-name}/#{$font-din-reg-name}.woff?#{$font-cache}') format('woff'),
+         url('#{map-get($path, fonts)}/#{$font-din-reg-name}/#{$font-din-reg-name}.svg?#{$font-cache}#qcr') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// TrashHand ====================================
+@font-face {
+    font-family: $font-trash-hand-name;
+    src: url('#{map-get($path, fonts)}/#{$font-trash-hand-name}/#{$font-trash-hand-name}.eot?#{$font-cache}');
+    src: url('#{map-get($path, fonts)}/#{$font-trash-hand-name}/#{$font-trash-hand-name}.eot?#{$font-cache}#iefix') format('embedded-opentype'),
+         url('#{map-get($path, fonts)}/#{$font-trash-hand-name}/#{$font-trash-hand-name}.ttf?#{$font-cache}') format('truetype'),
+         url('#{map-get($path, fonts)}/#{$font-trash-hand-name}/#{$font-trash-hand-name}.woff?#{$font-cache}') format('woff'),
+         url('#{map-get($path, fonts)}/#{$font-trash-hand-name}/#{$font-trash-hand-name}.svg?#{$font-cache}#qcr') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

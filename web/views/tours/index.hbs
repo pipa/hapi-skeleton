@@ -1,0 +1,17 @@
+<div class="vw-tours">
+    {{> global/gen-header title="Our Tours" chatBtn=true }}
+    <div class="container intro">
+        <h1>Welcome to Roatan Excursions</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+    </div>
+    <section class="container tour-list">
+        {{!-- TODO: filter render goes here: react --}}
+        <div id="js-filter-tours"></div>
+    </section>
+    {{> global/gen-footer-cruise }}
+</div>
+
+<script>
+    _app.addData({ tours: {{{ json data }}} });
+	_app.addView = 'tours/index.js';
+</script>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{{#minify}}
+<html lang="en">
+    {{> global/html-head}}
+    <body>
+        {{> global/header}}
+        <main id="main" role="main">
+            {{{ content }}}
+        </main>
+        {{> global/footer}}
+        {{> global/js}}
+    </body>
+</html>
+{{/minify}}

@@ -1,0 +1,17 @@
+<footer class="main-footer container">
+    <a href="/" class="footer-logo">
+        <img src="{{ assetsPath }}/img/global/main-logo.svg" class="img-responsive" alt="{{ appName }}">
+    </a>
+    <div class="footer-social row center-xs">
+        <h6>FOLLOW US:</h6>
+        <nav>
+            {{!-- <a href="" class="xs"><img src="{{ assetsPath }}/img/global/social/instagram-logo.svg" width="36" alt=""></a> --}}
+        </nav>
+    </div>
+    <div class="row">
+        {{> global/main-menu}}
+    </div>
+    <div class="row">
+        <small class="xs-12">&copy; {{ moment today format="YYYY"}} {{ appName }}. All rights reserved  -  Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</small>
+    </div>
+</footer>

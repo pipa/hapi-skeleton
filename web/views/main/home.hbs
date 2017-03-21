@@ -1,0 +1,65 @@
+<div class="vw-home">
+    <div class="slider">
+        <div class="slick">
+            <img src="{{ assetsPath }}/img/home/slider.img-1.jpg" class="img-slide" alt="">
+            {{!-- <img src="{{ assetsPath }}/img/home/slider.img-2.jpg" alt="">
+            <img src="{{ assetsPath }}/img/home/slider.img-3.jpg" alt="">
+            <img src="{{ assetsPath }}/img/home/slider.img-4.jpg" alt=""> --}}
+        </div>
+        <div class="container pr">
+            <a href="/cruise-passengers/" class="cruise-btn">
+                <span class="bubble"><i class="icon-cruise"></i></span>
+                <span class="ribbon"><b></b> CLICK HERE</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        {{> global/chat-btn }}
+        <section class="intro row middle-xs">
+            <div class="xs-12 lg-5 xl-5">
+                <div class="intro-banner active">
+                    <img src="{{ assetsPath }}/img/home/intro.img-starfish.jpg" alt="" class="img-1">
+                    <img src="{{ assetsPath }}/img/home/intro.img-beach.jpg" alt="" class="img-2">
+                    <img src="{{ assetsPath }}/img/home/intro.img-dolphin-1.jpg" alt="" class="img-3">
+                    <img src="{{ assetsPath }}/img/home/intro.img-dolphin-2.jpg" alt="" class="img-4">
+                    <img src="{{ assetsPath }}/img/home/intro.img-zipline.jpg" alt="" class="img-5">
+                </div>
+            </div>
+            <div class="xs-12 lg-6 lg-offset-1 xl-7 xl-offset-0">
+                <h4>Welcome To Roatan Excursions</h4>
+                <hr class="hidden-large-up">
+                <p>Tucked away in the Caribbean lies Roatan, the largest of the Bay Islands, and one of the world's best kept secrets. Privileged by its location along the Mesoamerican Reef, this 77km-long island is known for its beautiful white-sand beaches, turquoise waters, breathtaking sunsets, and to divers from all over the world who come to explore the treasures buried beneath the waves.</p>
+
+                {{> global/social-share}}
+            </div>
+        </section>
+    </div>
+
+    <section class="under-water txt-center">
+        <div class="container">
+            <div class="row center-xs">
+                <h3 class="xs"><img src="{{ assetsPath }}/img/global/turtle-logo.svg" alt="" class="turtle ib">Featured Tours</h3>
+            </div>
+            <div class="row" style="overflow:hidden;">
+                <div id="js-featured-tours"></div>
+            </div>
+            <div class="row center-xs">
+                <a href="/tours/" class="btn-clear-round xs-8 lg-3">View all tours</a>
+            </div>
+            <div class="row roa-map">
+                <h2 class="xs-12">Roatan</h2>
+                <h6 class="xs-12">WEST BAY BEACH - HONDURAS</h6>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+                <div class="map">
+                    <img src="{{ assetsPath }}/img/home/map.img-roatan.png" class="img-responsive" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    _app.addData({ tours: {{{ json data }}} });
+    _app.addView = 'main/home.js';
+</script>

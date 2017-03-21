@@ -1,0 +1,173 @@
+/*
+// Homepage Styles
+// ------------------------------------------------ */
+
+//==== Base ====//
+    .vw-home {
+        margin-bottom: -3rem;
+
+        h2 {
+            font-family: $font-trash;
+            color: #fff;
+            line-height: 5rem;
+        }
+        h3 {
+            font-family: $font-trash;
+            color: #fff;
+        }
+        h4 {
+            font-family: $font-trash;
+            color: color(blue);
+            text-align: center;
+        }
+        h6 {
+            font-family: $font-din-md;
+            color: color(blue, darker-1);
+
+            & + p { margin-top: .5rem; }
+        }
+        .img-slide {
+            max-width: 100%;
+        }
+        .turtle {
+            height: 7.2rem;
+            transform: rotate(45deg);
+        }
+        .slider {
+            position: relative;
+            z-index: z(after);
+        }
+        .cruise-btn {
+            position: absolute;
+            bottom: -1.5rem;
+            left: 2rem;
+
+            @include respond-to(xlarge) {
+                bottom: 8rem;
+                left: 4rem;
+            }
+        }
+        .chat-btn {
+            position: absolute;
+            right: 2rem;
+            top: -8.5rem;
+            z-index: z(after);
+            transform: translateY(50%);
+        }
+        .container {
+          position: relative;
+        }
+        .tour-item {
+            width: 26rem;
+            margin: 0 auto;
+        }
+    }
+    #js-featured-tours {
+        margin-bottom: 2rem;
+        max-height: 300px;
+    }
+
+//==== Intro ====//
+    .intro-banner {
+        position: relative;
+        width: 100%;
+        height: 40rem;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: z(after);
+            width: 13rem;
+            height: auto;
+            margin: 0;
+            border: 4px solid #fff;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s;
+        }
+        .img-1 {
+            z-index: 7;
+            width: 13.5rem;
+        }
+        .img-2 {
+            z-index: 6;
+            width: 27.5rem;
+        }
+        .img-3 {
+            z-index: 5;
+        }
+        .img-4 {
+            z-index: 4;
+            width: 23rem;
+        }
+        .img-5 {
+            z-index: 3;
+        }
+        &::before,
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            content: '';
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        &::before {
+            width: 28rem;
+            height: 30rem;
+            z-index: z(before);
+            background: rgba(color(green, lighter-2), .8);
+            transform: translate(-50%, -50%) rotate(-5deg);
+
+            @include respond-to(medium) {
+                width: 30rem;
+            }
+        }
+        &::after {
+            width: 28rem;
+            height: 29rem;
+            margin-left: 1rem;
+            z-index: z(default);
+            background: rgba(darken(color(red), 10%), .7);
+            transform: translate(-50%, -50%) rotate(3deg);
+
+            @include respond-to(medium) {
+                width: 29rem;
+            }
+        }
+        &.active {
+            .img-1 {
+                margin: -100px 0 0 80px;
+            }
+            .img-2 {
+                margin: -78px 0 0 -20px;
+            }
+            .img-3 {
+                margin: 25px 0 0 -70px;
+            }
+            .img-4 {
+                margin: 6px 0 0 45px;
+            }
+            .img-5 {
+                margin: 105px 0 0 56px;
+            }
+            &::before,
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+//==== Underwater effect ====//
+    .under-water {
+        margin-top: 5rem;
+        padding: 3.5rem 0 5rem;
+        color: #fff;
+        background: #011230 url('#{map-get($path, img)}/global/bg-undersea.jpg') top center no-repeat;
+        background-size: 100% 100%;
+    }
+
+//==== Roatan Map ====//
+    .roa-map {
+        margin-top: 9rem;
+    }

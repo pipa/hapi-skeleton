@@ -1,0 +1,271 @@
+/*
+// Homepage Styles
+// ------------------------------------------------ */
+
+//==== Cart ====//
+    .vw-cart {
+        h4 {
+            font: 2.5rem/1 $font-din-reg;
+
+            big {
+                font-size: 3.7rem;
+                color: color(blue);
+            }
+            & + .tour-item {
+                margin-top: 2rem;
+            }
+        }
+        strong {
+            display: block;
+            margin-top: .5rem;
+            font: 2.4rem $font-din-bold;
+        }
+        .cart-wrapper {
+            padding-top: 3rem;
+        }
+        .tour-item {
+            & > div {
+                padding-right: .2rem;
+                padding-left: .2rem;
+            }
+            a {
+                font: 1.4rem/1.8rem $font-din-bold;
+                color: color(blue);
+            }
+        }
+        .card-white {
+            height: 100%;
+            padding: 1rem .5rem .5rem;
+
+            h5 {
+                margin: 0;
+                font: 2rem/1 $font-din-md;
+            }
+            p {
+                font-size: 1.4rem;
+                line-height: 1.7rem;
+            }
+        }
+        .desc {
+            .card-white {
+                padding: 2rem 1rem .5rem;
+            }
+        }
+        .selection {
+            position: relative;
+            text-align: center;
+
+            p {
+                margin: 0;
+                line-height: 2rem;
+            }
+            .action-btns {
+                position: absolute;
+                left: .5rem;
+                right: .5rem;
+                bottom: .5rem;
+            }
+        }
+        .action-btns {
+            margin-top: 1.6rem;
+        }
+        .cart-total {
+            margin-bottom: 1rem;
+            font: 2.3rem/1 $font-din-reg;
+            text-align: center;
+
+            span {
+                font-size: 2.5rem;
+                font-family: $font-din-bold;
+                color: color(green);
+            }
+        }
+    }
+
+//==== Checkout ====//
+    .vw-chkt {
+        h4 {
+            margin-top: 5rem;
+            display: block;
+            font: 3rem/1 $font-din-reg;
+            color: color(blue);
+
+            & + h5 {
+                margin-top: 0;
+                margin-bottom: 2rem;
+            }
+        }
+        h5 {
+            font: 1.5rem/1 $font-din-reg;
+        }
+        .form-control[readonly] {
+            background-color: #ccc;
+        }
+        .form-error {
+            border-color: color(red);
+        }
+        .address-field {
+            margin-bottom: 1rem;
+        }
+        .chkt-form {
+            padding-bottom: 5rem;
+        }
+        .cart-box {
+            margin-bottom: 1rem;
+        }
+        .tour-item {
+            margin-bottom: 4rem;
+
+            &:last-child { margin-bottom: 1rem; }
+            @include respond-to(large) {
+                margin-bottom: .5rem;
+
+                &:last-child { margin-bottom: 0; }
+            }
+        }
+        .form-control {
+            border: 0;
+        }
+        .ttl-main {
+            margin-bottom: .5rem;
+            padding: 1rem;
+            font: 2.2rem $font-din-md;
+            text-align: center;
+            color: color(grey);
+        }
+        .tour-ttl {
+            font: 2rem/1 $font-din-md;
+        }
+        .form-label {
+            font-size: 1.4rem;
+            color: color(grey, lighter-1);
+
+            a {
+                font-family: $font-din-bold;
+                color: color(blue);
+            }
+        }
+        .img-box {
+            order: 2;
+            padding-left: 0;
+            padding-right: .5rem;
+        }
+        .desc {
+            order: 4;
+            margin-top: .5rem;
+            padding: 1rem 2rem;
+
+            @include respond-to(large) {
+                order: 3;
+                margin-top: 0;
+                border-right: .5rem solid transparent;
+            }
+        }
+        .price-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            order: 3;
+
+            p {
+                margin: .5rem 0;
+            }
+            strong {
+                font: 2rem/2rem $font-din-bold;
+                color: color(grey);
+            }
+            @include respond-to(large) { order: 4; }
+        }
+        .col {
+            @include respond-to(large) {
+                &:first-child {
+                    padding-right: 1.5rem;
+                }
+                &:last-child {
+                    padding-left: 1.5rem;
+                }
+            }
+        }
+        .pay-info {
+            padding: 3rem 0;
+        }
+        .cart-total {
+            margin-top: 3rem;
+            text-align: center;
+
+            big {
+                font: 4.5rem/1 $font-din-bold;
+                color: color(grey, lighter-1);
+            }
+            span {
+                font: 4.8rem/1 $font-din-bold;
+                color: color(green);
+            }
+        }
+        .submit-btn {
+            margin-top: 1rem;
+        }
+        .cc-types {
+            margin: 1rem 0;
+
+            i {
+                font-size: 2.3rem;
+                text-align: center;
+                opacity: .4;
+
+                &.active { opacity: 1; }
+                @include respond-to(small) { font-size: 2.5rem; }
+                @include respond-to(medium) { font-size: 3rem; }
+            }
+        }
+    }
+
+//==== Confirmation ====//
+    .vw-conf {
+        h3 {
+            margin-top: 5rem;
+            display: block;
+            font: 3rem/1 $font-din-reg;
+            color: color(blue);
+        }
+        h4 {
+            display: block;
+            margin-top: 4rem;
+            font: 2rem/1 $font-din-reg;
+        }
+        h5 {
+            font: 2.2rem/1 $font-din-md;
+        }
+        .tour-item {
+            margin-bottom: .5rem;
+        }
+        .tour-img {
+            height: 14rem;
+        }
+        .tour-username {
+            font: 2rem/1 $font-din-bold;
+            color: color(grey);
+        }
+        .desc {
+            padding: 1rem;
+
+            @include respond-to(large) {
+                border-right: .5rem solid transparent;
+            }
+        }
+        .info {
+            padding-left: 2rem;
+        }
+        .selection {
+            text-align: center;
+
+            p {
+                margin: 0;
+            }
+            strong {
+                font: 2rem/2rem $font-din-bold;
+                color: color(grey);
+            }
+        }
+    }

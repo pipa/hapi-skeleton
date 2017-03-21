@@ -1,0 +1,42 @@
+<div class="vw-crz">
+    <header class="gen-header">
+        <div class="img-box">
+            <img src="{{ assetsPath }}/img/cruises/intro.bg-cruise.jpg" class="img-responsive" alt="">
+            <div class="title">
+                <small>EXCURSIONS</small>
+                <big>CRUISE PASSANGERS</big>
+            </div>
+        </div>
+        <div class="container pr">
+            {{> global/chat-btn }}
+        </div>
+    </header>
+
+    <div class="container no-flow-x">
+        <section class="intro row middle-xs">
+            <h3 class="xs-12">the best shore excursions</h3>
+            <div class="xs-12 lg-5 intro-pics">
+                <img src="{{ assetsPath }}/img/home/intro.img-starfish.jpg" alt="">
+                <img src="{{ assetsPath }}/img/home/intro.img-zipline.jpg" alt="">
+                <img src="{{ assetsPath }}/img/home/intro.img-dolphin-1.jpg" alt="">
+            </div>
+            <div class="xs-12 lg-6 lg-offset-1 xl-7 xl-offset-0">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+
+                <aside class="social">
+                    <span class="ib">SHARE:</span>
+                    <a href="" class="ib icon-facebook"></a>
+                    <a href="" class="ib icon-twitter"></a>
+                    <a href="" class="ib icon-google-plus"></a>
+                </aside>
+            </div>
+        </section>
+    </div>
+    {{!-- JS Zone --}}
+    <div id="js-cruise-box"></div>
+</div>
+
+<script>
+    _app.addData({ ports: {{{ json data.ports }}}, cruiseLines: {{{ json data.cruiseLines }}} });
+    _app.addView = 'cruises/index.js';
+</script>

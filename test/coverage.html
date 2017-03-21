@@ -548,7 +548,7 @@
             <a href="#lib/index.js"><span class="dirname">lib/</span><span class="basename">index.js</span></a>
         </li>
         <li>
-            <span class="cov high">100</span>
+            <span class="cov high">80.58</span>
             <a href="#lib/controllers/base.js"><span class="dirname">lib/controllers/</span><span class="basename">base.js</span></a>
         </li>
         <li>
@@ -564,7 +564,7 @@
             <a href="#lib/plugins/auth.js"><span class="dirname">lib/plugins/</span><span class="basename">auth.js</span></a>
         </li>
         <li>
-            <span class="cov high">82.73</span>
+            <span class="cov high">87.27</span>
             <a href="#lib/plugins/db.js"><span class="dirname">lib/plugins/</span><span class="basename">db.js</span></a>
         </li>
         <li>
@@ -599,11 +599,11 @@
     </div>
     <div id="tests">
       <h1>Test Report</h1>
-      <div class="stats high">
-          <div class="failures">0</div>
+      <div class="stats terrible">
+          <div class="failures">7</div>
           <div class="skipped">0</div>
           <div class="test-count">21</div>
-          <div class="duration">1025</div>
+          <div class="duration">9255</div>
       </div>
       <div id="filters">
           <input type="checkbox" checked="" onchange="filter(this)" value="success" id="show-success">
@@ -634,14 +634,14 @@
               <td class="test-title">Server can be started
                   
               </td>
-              <td class="test-duration">16</td>
+              <td class="test-duration">15</td>
           </tr>
           <tr class="show Server success">
               <td class="test-id">2</td>
               <td class="test-title">Server heartbeat check
                   
               </td>
-              <td class="test-duration">22</td>
+              <td class="test-duration">20</td>
           </tr>
           <tr class="show Madero_- success">
               <td class="test-id">3</td>
@@ -655,14 +655,14 @@
               <td class="test-title">Madero - Log an error to console
                   
               </td>
-              <td class="test-duration">1</td>
+              <td class="test-duration">2</td>
           </tr>
           <tr class="show Madero_- success">
               <td class="test-id">5</td>
               <td class="test-title">Madero - Log a string message
                   
               </td>
-              <td class="test-duration">2</td>
+              <td class="test-duration">1</td>
           </tr>
           <tr class="show Madero_- success">
               <td class="test-id">6</td>
@@ -676,7 +676,7 @@
               <td class="test-title">Madero - Write to file async
                   
               </td>
-              <td class="test-duration">1</td>
+              <td class="test-duration">2</td>
           </tr>
           <tr class="show Madero_- success">
               <td class="test-id">8</td>
@@ -690,91 +690,125 @@
               <td class="test-title">Madero - Log a 404 request
                   
               </td>
-              <td class="test-duration">6</td>
+              <td class="test-duration">5</td>
           </tr>
           <tr class="show Mongo_- success">
               <td class="test-id">10</td>
               <td class="test-title">Mongo - has mongoose
                   
               </td>
-              <td class="test-duration">10</td>
+              <td class="test-duration">0</td>
           </tr>
           <tr class="show Mongo_- success">
               <td class="test-id">11</td>
               <td class="test-title">Mongo - disconnect mongoose
                   
               </td>
-              <td class="test-duration">4</td>
+              <td class="test-duration">2</td>
           </tr>
           <tr class="show /users_endpoint_- success">
               <td class="test-id">12</td>
               <td class="test-title">/users endpoint - should require authentication
                   
               </td>
-              <td class="test-duration">15</td>
+              <td class="test-duration">6</td>
           </tr>
           <tr class="show /users_endpoint_- success">
               <td class="test-id">13</td>
               <td class="test-title">/users endpoint - GET all records
                   
               </td>
-              <td class="test-duration">32</td>
+              <td class="test-duration">360</td>
           </tr>
-          <tr class="show /users_endpoint_- success">
+          <tr class="show /users_endpoint_- failure">
               <td class="test-id">14</td>
               <td class="test-title">/users endpoint - POST create a new record
-                  
+                  <div class="stack">Error: Timed out (2000ms) - /users endpoint - POST create a new record
+        at Timeout.setTimeout (/Users/luismatute/Sites/LM/skeleton/node_modules/lab/lib/runner.js:611:27)
+        at ontimeout (timers.js:365:14)
+        at tryOnTimeout (timers.js:237:5)
+        at Timer.listOnTimeout (timers.js:207:5)</div>
               </td>
-              <td class="test-duration">25</td>
+              <td class="test-duration">2004</td>
           </tr>
-          <tr class="show /users_endpoint_- success">
+          <tr class="show /users_endpoint_- failure">
               <td class="test-id">15</td>
               <td class="test-title">/users endpoint - GET top 10 records
-                  
+                  <div class="stack">Error: Timed out (2000ms) - /users endpoint - GET top 10 records
+        at Timeout.setTimeout (/Users/luismatute/Sites/LM/skeleton/node_modules/lab/lib/runner.js:611:27)
+        at ontimeout (timers.js:365:14)
+        at tryOnTimeout (timers.js:237:5)
+        at Timer.listOnTimeout (timers.js:207:5)</div>
               </td>
-              <td class="test-duration">6</td>
+              <td class="test-duration">2005</td>
           </tr>
-          <tr class="show /users_endpoint_- success">
+          <tr class="show /users_endpoint_- failure">
               <td class="test-id">16</td>
               <td class="test-title">/users endpoint - GET created record
-                  
+                  <div class="stack">Error: Expected &#x27;fail&#x27; to equal specified value
+        at internals.Assertion.internals.equal (/Users/luismatute/Sites/LM/skeleton/node_modules/code/lib/index.js:270:17)
+        at server.inject.response (/Users/luismatute/Sites/LM/skeleton/test/user.js:144:47)
+        at Shot.inject (/Users/luismatute/Sites/LM/skeleton/node_modules/hapi/lib/connection.js:327:16)
+        at process.nextTick (/Users/luismatute/Sites/LM/skeleton/node_modules/shot/lib/response.js:26:36)
+        at _combinedTickCallback (internal/process/next_tick.js:67:7)
+        at process._tickDomainCallback (internal/process/next_tick.js:122:9)</div>
               </td>
-              <td class="test-duration">6</td>
+              <td class="test-duration">5</td>
           </tr>
-          <tr class="show /users_endpoint_- success">
+          <tr class="show /users_endpoint_- failure">
               <td class="test-id">17</td>
               <td class="test-title">/users endpoint - GET fail getting record
-                  
+                  <div class="stack">Error: Timed out (2000ms) - /users endpoint - GET fail getting record
+        at Timeout.setTimeout (/Users/luismatute/Sites/LM/skeleton/node_modules/lab/lib/runner.js:611:27)
+        at ontimeout (timers.js:365:14)
+        at tryOnTimeout (timers.js:237:5)
+        at Timer.listOnTimeout (timers.js:207:5)</div>
               </td>
-              <td class="test-duration">6</td>
+              <td class="test-duration">2004</td>
           </tr>
-          <tr class="show /users_endpoint_- success">
+          <tr class="show /users_endpoint_- failure">
               <td class="test-id">18</td>
               <td class="test-title">/users endpoint - PUT created record
-                  
-              </td>
-              <td class="test-duration">12</td>
-          </tr>
-          <tr class="show /users_endpoint_- success">
-              <td class="test-id">19</td>
-              <td class="test-title">/users endpoint - DELETE created record
-                  
-              </td>
-              <td class="test-duration">8</td>
-          </tr>
-          <tr class="show /users_endpoint_- success">
-              <td class="test-id">20</td>
-              <td class="test-title">/users endpoint - DELETE fail
-                  
+                  <div class="stack">Error: Expected &#x27;fail&#x27; to equal specified value
+        at internals.Assertion.internals.equal (/Users/luismatute/Sites/LM/skeleton/node_modules/code/lib/index.js:270:17)
+        at server.inject.response (/Users/luismatute/Sites/LM/skeleton/test/user.js:183:47)
+        at Shot.inject (/Users/luismatute/Sites/LM/skeleton/node_modules/hapi/lib/connection.js:327:16)
+        at process.nextTick (/Users/luismatute/Sites/LM/skeleton/node_modules/shot/lib/response.js:26:36)
+        at _combinedTickCallback (internal/process/next_tick.js:67:7)
+        at process._tickDomainCallback (internal/process/next_tick.js:122:9)</div>
               </td>
               <td class="test-duration">6</td>
+          </tr>
+          <tr class="show /users_endpoint_- failure">
+              <td class="test-id">19</td>
+              <td class="test-title">/users endpoint - DELETE created record
+                  <div class="stack">Error: Expected &#x27;fail&#x27; to equal specified value
+        at internals.Assertion.internals.equal (/Users/luismatute/Sites/LM/skeleton/node_modules/code/lib/index.js:270:17)
+        at server.inject.response (/Users/luismatute/Sites/LM/skeleton/test/user.js:199:47)
+        at Shot.inject (/Users/luismatute/Sites/LM/skeleton/node_modules/hapi/lib/connection.js:327:16)
+        at process.nextTick (/Users/luismatute/Sites/LM/skeleton/node_modules/shot/lib/response.js:26:36)
+        at _combinedTickCallback (internal/process/next_tick.js:67:7)
+        at process._tickDomainCallback (internal/process/next_tick.js:122:9)</div>
+              </td>
+              <td class="test-duration">4</td>
+          </tr>
+          <tr class="show /users_endpoint_- failure">
+              <td class="test-id">20</td>
+              <td class="test-title">/users endpoint - DELETE fail
+                  <div class="stack">Error: Timed out (2000ms) - /users endpoint - DELETE fail
+        at Timeout.setTimeout (/Users/luismatute/Sites/LM/skeleton/node_modules/lab/lib/runner.js:611:27)
+        at ontimeout (timers.js:365:14)
+        at tryOnTimeout (timers.js:237:5)
+        at Timer.listOnTimeout (timers.js:207:5)</div>
+              </td>
+              <td class="test-duration">2000</td>
           </tr>
           <tr class="show /users_endpoint_- success">
               <td class="test-id">21</td>
               <td class="test-title">/users endpoint - Error getting invalid user
                   
               </td>
-              <td class="test-duration">3</td>
+              <td class="test-duration">6</td>
           </tr>
           </tbody>
       </table>
@@ -782,10 +816,10 @@
     </div>    <div id="coverage">
         <h1>Code Coverage Report</h1>
         <div class="stats high">
-            <div class="percentage">96.41%</div>
+            <div class="percentage">94.87%</div>
             <div class="sloc">974</div>
-            <div class="hits">939</div>
-            <div class="misses">35</div>
+            <div class="hits">924</div>
+            <div class="misses">50</div>
         </div>
         <div id="files">
             <div class="file">
@@ -852,139 +886,139 @@
                             <td class="line" data-tooltip>8</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        /* $lab:coverage:off$ */</td>
+                            <td class="source">        //&#x3D;&#x3D; Cant test the process.env.NODE_ENV because</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>9</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        env: process.env.NODE_ENV || &#x27;dev&#x27;</td>
+                            <td class="source">        //-- lab puts a NODE_ENV when running tests</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>10</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        /* $lab:coverage:on$ */</td>
+                            <td class="source">        /* $lab:coverage:off$ */</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>11</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">    },</td>
+                            <td class="source">        env: process.env.NODE_ENV || &#x27;dev&#x27;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>12</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">    mongo: {</td>
+                            <td class="source">        /* $lab:coverage:on$ */</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>13</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        db: &#x27;skeleton&#x27;,</td>
+                            <td class="source">    },</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>14</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        // connections: [</td>
+                            <td class="source">    mongo: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>15</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        //     {</td>
+                            <td class="source">        db: &#x27;skeleton&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>16</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        //         host: &#x27;aws-us-east-1-portal.12.dblayer.com&#x27;,</td>
+                            <td class="source">        // connections: [</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>17</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        //         port: 15324,</td>
+                            <td class="source">        //     {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>18</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        //     },</td>
+                            <td class="source">        //         host: &#x27;aws-us-east-1-portal.12.dblayer.com&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>19</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        //     {</td>
+                            <td class="source">        //         port: 15324,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>20</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        //         host: &#x27;aws-us-east-1-portal.15.dblayer.com&#x27;,</td>
+                            <td class="source">        //     },</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>21</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        //         port: 15324,</td>
+                            <td class="source">        //     {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>22</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        //     }</td>
+                            <td class="source">        //         host: &#x27;aws-us-east-1-portal.15.dblayer.com&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>23</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        // ],</td>
+                            <td class="source">        //         port: 15324,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>24</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">        connections: {</td>
+                            <td class="source">        //     }</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>25</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            // host: &#x27;mongodb01.flukyfactory.com&#x27;,</td>
+                            <td class="source">        // ],</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>26</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            // port: 49151,</td>
+                            <td class="source">        connections: {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>27</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            // host: &#x27;ds127949.mlab.com&#x27;,</td>
+                            <td class="source">            host: &#x27;mongodb01.flukyfactory.com&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>28</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            // port: 27949</td>
+                            <td class="source">            port: 49151,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>29</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            host: &#x27;localhost&#x27;,</td>
+                            <td class="source">            // host: &#x27;localhost&#x27;,</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>30</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
-                            <td class="source">            port: 27017</td>
+                            <td class="source">            // port: 27017</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>31</td>
@@ -1631,7 +1665,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>138</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>19</td>
+                            <td class="hits" data-tooltip>11</td>
                             <td class="source">    return internals.store.get(key, criteria);</td>
                         </tr>
                         <tr class="hit">
@@ -1787,10 +1821,10 @@
             <div class="file">
                 <h2 id="lib/controllers/base.js">lib/controllers/base.js</h2>
                 <div class="stats high">
-                    <div class="percentage">100%</div>
+                    <div class="percentage">80.58%</div>
                     <div class="sloc">103</div>
-                    <div class="hits">103</div>
-                    <div class="misses">0</div>
+                    <div class="hits">83</div>
+                    <div class="misses">20</div>
                 </div>
                 <table>
                     <thead>
@@ -1928,30 +1962,30 @@
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>22</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source">            const message &#x3D; &#x60;db.${this.mongoCollectionName}.save(${JSON.stringify(payload)});&#x60;;</td>
-                        </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>23</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">            const data &#x3D; { message, payload, doc };</td>
-                        </tr>
+                            <tr class="chunks">
+                                <td class="line" data-tooltip>22</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source"><div>            </div><div class="miss never" data-tooltip>const message &#x3D; &#x60;db.${this.mongoCollectionName}.save(${JSON.stringify(payload)});&#x60;;</div></td>
+                            </tr>
+                            <tr class="miss">
+                                <td class="line" data-tooltip>23</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source" data-tooltip>            const data &#x3D; { message, payload, doc };</td>
+                            </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>24</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>25</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">            return this._coda(request, reply, err, doc, data, [&#x27;database&#x27;, &#x27;save&#x27;]);</td>
-                        </tr>
+                            <tr class="miss">
+                                <td class="line" data-tooltip>25</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source" data-tooltip>            return this._coda(request, reply, err, doc, data, [&#x27;database&#x27;, &#x27;save&#x27;]);</td>
+                            </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>26</td>
                             <td class="lint empty"></td>
@@ -1991,19 +2025,19 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>32</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>4</td>
+                            <td class="hits" data-tooltip>3</td>
                             <td class="source">        const limit &#x3D; request.params.limit || null;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>33</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>4</td>
+                            <td class="hits" data-tooltip>3</td>
                             <td class="source">        const sort &#x3D; (!_id) ? { date_created: 1 } : null;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>34</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>4</td>
+                            <td class="hits" data-tooltip>3</td>
                             <td class="source">        const query &#x3D; (_id) ? { _id } : {};</td>
                         </tr>
                         <tr class="hit">
@@ -2015,7 +2049,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>36</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>4</td>
+                            <td class="hits" data-tooltip>3</td>
                             <td class="source">        return this._get(query, limit, sort)</td>
                         </tr>
                         <tr class="hit">
@@ -2066,54 +2100,54 @@
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>45</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source">        const { payload } &#x3D; request;</td>
-                        </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>46</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">        const conditions &#x3D; { _id: payload._id };</td>
-                        </tr>
+                            <tr class="chunks">
+                                <td class="line" data-tooltip>45</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source"><div>        </div><div class="miss never" data-tooltip>const { payload } &#x3D; request;</div></td>
+                            </tr>
+                            <tr class="miss">
+                                <td class="line" data-tooltip>46</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source" data-tooltip>        const conditions &#x3D; { _id: payload._id };</td>
+                            </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>47</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>48</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">        delete payload._id;</td>
-                        </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>49</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">        this.Collection.findOneAndUpdate(conditions, payload, { new: true }, (err, _doc) &#x3D;&gt; {</td>
-                        </tr>
+                            <tr class="miss">
+                                <td class="line" data-tooltip>48</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source" data-tooltip>        delete payload._id;</td>
+                            </tr>
+                            <tr class="miss">
+                                <td class="line" data-tooltip>49</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source" data-tooltip>        this.Collection.findOneAndUpdate(conditions, payload, { new: true }, (err, _doc) &#x3D;&gt; {</td>
+                            </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>50</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>51</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source">            const message &#x3D; &#x60;db.${this.mongoCollectionName}.findOneAndUpdate(${JSON.stringify(payload)});&#x60;;</td>
-                        </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>52</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">            const data &#x3D; {</td>
-                        </tr>
+                            <tr class="chunks">
+                                <td class="line" data-tooltip>51</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source"><div>            </div><div class="miss never" data-tooltip>const message &#x3D; &#x60;db.${this.mongoCollectionName}.findOneAndUpdate(${JSON.stringify(payload)});&#x60;;</div></td>
+                            </tr>
+                            <tr class="miss">
+                                <td class="line" data-tooltip>52</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source" data-tooltip>            const data &#x3D; {</td>
+                            </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>53</td>
                             <td class="lint empty"></td>
@@ -2138,12 +2172,12 @@
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>57</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">            return this._coda(request, reply, err, _doc, data, [&#x27;database&#x27;, &#x27;update&#x27;]);</td>
-                        </tr>
+                            <tr class="miss">
+                                <td class="line" data-tooltip>57</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source" data-tooltip>            return this._coda(request, reply, err, _doc, data, [&#x27;database&#x27;, &#x27;update&#x27;]);</td>
+                            </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>58</td>
                             <td class="lint empty"></td>
@@ -2189,7 +2223,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>65</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
+                            <td class="hits" data-tooltip>1</td>
                             <td class="source">        this.Collection.findOneAndRemove(query, (err, doc) &#x3D;&gt; {</td>
                         </tr>
                         <tr class="hit">
@@ -2198,24 +2232,24 @@
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>67</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip></td>
-                            <td class="source">            let result &#x3D; [];</td>
-                        </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>68</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">            const message &#x3D; &#x60;db.${this.mongoCollectionName}.findOneAndRemove(${JSON.stringify(query)});&#x60;;</td>
-                        </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>69</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">            const data &#x3D; {</td>
-                        </tr>
+                            <tr class="chunks">
+                                <td class="line" data-tooltip>67</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source"><div>            </div><div class="miss never" data-tooltip>let result &#x3D; [];</div></td>
+                            </tr>
+                            <tr class="miss">
+                                <td class="line" data-tooltip>68</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source" data-tooltip>            const message &#x3D; &#x60;db.${this.mongoCollectionName}.findOneAndRemove(${JSON.stringify(query)});&#x60;;</td>
+                            </tr>
+                            <tr class="miss">
+                                <td class="line" data-tooltip>69</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source" data-tooltip>            const data &#x3D; {</td>
+                            </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>70</td>
                             <td class="lint empty"></td>
@@ -2240,24 +2274,24 @@
                             <td class="hits" data-tooltip></td>
                             <td class="source">            // Found doc...delete it!</td>
                         </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>74</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">            if (doc) {</td>
-                        </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>75</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">                doc.remove();</td>
-                        </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>76</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
-                            <td class="source">                result &#x3D; &#x60;${ request.params._id } deleted successfully&#x60;;</td>
-                        </tr>
+                            <tr class="miss">
+                                <td class="line" data-tooltip>74</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source" data-tooltip>            if (doc) {</td>
+                            </tr>
+                            <tr class="miss">
+                                <td class="line" data-tooltip>75</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source" data-tooltip>                doc.remove();</td>
+                            </tr>
+                            <tr class="miss">
+                                <td class="line" data-tooltip>76</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source" data-tooltip>                result &#x3D; &#x60;${ request.params._id } deleted successfully&#x60;;</td>
+                            </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>77</td>
                             <td class="lint empty"></td>
@@ -2270,12 +2304,12 @@
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>79</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">            return this._coda(request, reply, err, result, data, [&#x27;database&#x27;, &#x27;delete&#x27;]);</td>
-                        </tr>
+                            <tr class="miss">
+                                <td class="line" data-tooltip>79</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source" data-tooltip>            return this._coda(request, reply, err, result, data, [&#x27;database&#x27;, &#x27;delete&#x27;]);</td>
+                            </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>80</td>
                             <td class="lint empty"></td>
@@ -2411,7 +2445,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>102</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>4</td>
+                            <td class="hits" data-tooltip>3</td>
                             <td class="source">        qry &#x3D; qry.find(query);</td>
                         </tr>
                         <tr class="hit">
@@ -2429,7 +2463,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>105</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>4</td>
+                            <td class="hits" data-tooltip>3</td>
                             <td class="source">        if (limit) {</td>
                         </tr>
                         <tr class="hit">
@@ -2459,7 +2493,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>110</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>4</td>
+                            <td class="hits" data-tooltip>3</td>
                             <td class="source">        if (sort) {</td>
                         </tr>
                         <tr class="hit">
@@ -2489,7 +2523,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>115</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>4</td>
+                            <td class="hits" data-tooltip>3</td>
                             <td class="source">        return qry.lean(lean);</td>
                         </tr>
                         <tr class="hit">
@@ -2531,7 +2565,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>122</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>9</td>
+                            <td class="hits" data-tooltip>2</td>
                             <td class="source">        let response &#x3D; (err !&#x3D;&#x3D; null) ? null : JSend.success(result); // HTTP 201</td>
                         </tr>
                         <tr class="hit">
@@ -2543,7 +2577,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>124</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>9</td>
+                            <td class="hits" data-tooltip>2</td>
                             <td class="source">        if (err !&#x3D;&#x3D; null) {</td>
                         </tr>
                         <tr class="hit">
@@ -2576,24 +2610,24 @@
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>130</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>9</td>
-                            <td class="source">        if (result &amp;&amp; result.constructor &#x3D;&#x3D;&#x3D; Array &amp;&amp; !result.length) {</td>
-                        </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>131</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">            tags &#x3D; [&#x27;warning&#x27;, ..._tags, &#x27;notFound&#x27;];</td>
-                        </tr>
-                        <tr class="hit">
-                            <td class="line" data-tooltip>132</td>
-                            <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
-                            <td class="source">            response &#x3D; Boom.notFound(&#x27;Record not found&#x27;); // HTTP 404 - Not Found</td>
-                        </tr>
+                            <tr class="chunks">
+                                <td class="line" data-tooltip>130</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source"><div>        if (result &amp;&amp; </div><div class="miss true" data-tooltip>result.constructor &#x3D;&#x3D;&#x3D; Array</div><div> &amp;&amp; !result.length) {</div></td>
+                            </tr>
+                            <tr class="miss">
+                                <td class="line" data-tooltip>131</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source" data-tooltip>            tags &#x3D; [&#x27;warning&#x27;, ..._tags, &#x27;notFound&#x27;];</td>
+                            </tr>
+                            <tr class="miss">
+                                <td class="line" data-tooltip>132</td>
+                                <td class="lint empty"></td>
+                                <td class="hits" data-tooltip></td>
+                                <td class="source" data-tooltip>            response &#x3D; Boom.notFound(&#x27;Record not found&#x27;); // HTTP 404 - Not Found</td>
+                            </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>133</td>
                             <td class="lint empty"></td>
@@ -2609,7 +2643,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>135</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>9</td>
+                            <td class="hits" data-tooltip>2</td>
                             <td class="source">        request.log(tags, data);</td>
                         </tr>
                         <tr class="hit">
@@ -2621,7 +2655,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>137</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>9</td>
+                            <td class="hits" data-tooltip>2</td>
                             <td class="source">        return reply(response);</td>
                         </tr>
                         <tr class="hit">
@@ -3353,10 +3387,10 @@
             <div class="file">
                 <h2 id="lib/plugins/db.js">lib/plugins/db.js</h2>
                 <div class="stats high">
-                    <div class="percentage">82.73%</div>
+                    <div class="percentage">87.27%</div>
                     <div class="sloc">110</div>
-                    <div class="hits">91</div>
-                    <div class="misses">19</div>
+                    <div class="hits">96</div>
+                    <div class="misses">14</div>
                 </div>
                 <table>
                     <thead>
@@ -3920,42 +3954,42 @@
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
-                            <tr class="chunks">
-                                <td class="line" data-tooltip>93</td>
-                                <td class="lint empty"></td>
-                                <td class="hits" data-tooltip></td>
-                                <td class="source"><div>            if (</div><div class="miss false" data-tooltip>err</div><div>) {</div></td>
-                            </tr>
-                            <tr class="miss">
-                                <td class="line" data-tooltip>94</td>
-                                <td class="lint empty"></td>
-                                <td class="hits" data-tooltip></td>
-                                <td class="source" data-tooltip>                entry.error &#x3D; err;</td>
-                            </tr>
-                            <tr class="miss">
-                                <td class="line" data-tooltip>95</td>
-                                <td class="lint empty"></td>
-                                <td class="hits" data-tooltip></td>
-                                <td class="source" data-tooltip>                entry.message &#x3D; &#x60;Failed to connect to: ${ uri }&#x60;;</td>
-                            </tr>
-                            <tr class="miss">
-                                <td class="line" data-tooltip>96</td>
-                                <td class="lint empty"></td>
-                                <td class="hits" data-tooltip></td>
-                                <td class="source" data-tooltip>                plugin.log([&#x27;error&#x27;, &#x27;db&#x27;, &#x27;connection&#x27;], entry);</td>
-                            </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>93</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip>2</td>
+                            <td class="source">            if (err) {</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>94</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">                entry.error &#x3D; err;</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>95</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">                entry.message &#x3D; &#x60;Failed to connect to: ${ uri }&#x60;;</td>
+                        </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>96</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">                plugin.log([&#x27;error&#x27;, &#x27;db&#x27;, &#x27;connection&#x27;], entry);</td>
+                        </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>97</td>
                             <td class="lint empty"></td>
                             <td class="hits" data-tooltip></td>
                             <td class="source"></td>
                         </tr>
-                            <tr class="miss">
-                                <td class="line" data-tooltip>98</td>
-                                <td class="lint empty"></td>
-                                <td class="hits" data-tooltip></td>
-                                <td class="source" data-tooltip>                return false;</td>
-                            </tr>
+                        <tr class="hit">
+                            <td class="line" data-tooltip>98</td>
+                            <td class="lint empty"></td>
+                            <td class="hits" data-tooltip>1</td>
+                            <td class="source">                return false;</td>
+                        </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>99</td>
                             <td class="lint empty"></td>
@@ -3971,7 +4005,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>101</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
+                            <td class="hits" data-tooltip>1</td>
                             <td class="source">            plugin.log([&#x27;db&#x27;, &#x27;connection&#x27;, &#x27;start&#x27;], entry);</td>
                         </tr>
                         <tr class="hit">
@@ -4739,7 +4773,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>51</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>19</td>
+                            <td class="hits" data-tooltip>15</td>
                             <td class="source">    const done &#x3D; callback || hoek.ignore;</td>
                         </tr>
                         <tr class="hit">
@@ -4757,7 +4791,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>54</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>19</td>
+                            <td class="hits" data-tooltip>15</td>
                             <td class="source">    const result &#x3D; joi.validate({ entry: event, opts: options }, schema, { allowUnknown: true });</td>
                         </tr>
                         <tr class="hit">
@@ -4775,7 +4809,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>57</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>19</td>
+                            <td class="hits" data-tooltip>15</td>
                             <td class="source">    if (result.error !&#x3D;&#x3D; null) {</td>
                         </tr>
                         <tr class="hit">
@@ -4817,49 +4851,49 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>64</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>18</td>
+                            <td class="hits" data-tooltip>14</td>
                             <td class="source">    let logString &#x3D; &#x27;&#x27;;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>65</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>18</td>
+                            <td class="hits" data-tooltip>14</td>
                             <td class="source">    let logFile &#x3D; null;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>66</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>18</td>
+                            <td class="hits" data-tooltip>14</td>
                             <td class="source">    const { entry, opts } &#x3D; result.value;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>67</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>18</td>
+                            <td class="hits" data-tooltip>14</td>
                             <td class="source">    const { file, async } &#x3D; opts;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>68</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>18</td>
+                            <td class="hits" data-tooltip>14</td>
                             <td class="source">    const { path, silent } &#x3D; internals.settings;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>69</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>18</td>
+                            <td class="hits" data-tooltip>14</td>
                             <td class="source">    const filePath &#x3D; &#x60;${ path }/${ file }.log&#x60;;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>70</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>18</td>
+                            <td class="hits" data-tooltip>14</td>
                             <td class="source">    const now &#x3D; moment();</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>71</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>18</td>
+                            <td class="hits" data-tooltip>14</td>
                             <td class="source">    const log &#x3D; {</td>
                         </tr>
                         <tr class="hit">
@@ -4883,7 +4917,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>75</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>18</td>
+                            <td class="hits" data-tooltip>14</td>
                             <td class="source">    let entryData &#x3D; { tags: entry.tags };</td>
                         </tr>
                         <tr class="hit">
@@ -4895,7 +4929,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>77</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>18</td>
+                            <td class="hits" data-tooltip>14</td>
                             <td class="source">    if (request) {</td>
                         </tr>
                         <tr class="hit">
@@ -4907,19 +4941,19 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>79</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>9</td>
+                            <td class="hits" data-tooltip>2</td>
                             <td class="source">        const scoot &#x3D; request.plugins.scooter.toJSON();</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>80</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>9</td>
+                            <td class="hits" data-tooltip>2</td>
                             <td class="source">        const { method, info, headers, route } &#x3D; request;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>81</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>9</td>
+                            <td class="hits" data-tooltip>2</td>
                             <td class="source">        const req &#x3D; {</td>
                         </tr>
                         <tr class="hit">
@@ -5015,13 +5049,13 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>97</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>9</td>
+                            <td class="hits" data-tooltip>2</td>
                             <td class="source">        if (request.auth.credentials) {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>98</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>5</td>
+                            <td class="hits" data-tooltip>1</td>
                             <td class="source">            req.auth &#x3D; {</td>
                         </tr>
                         <tr class="hit">
@@ -5063,7 +5097,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>105</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>9</td>
+                            <td class="hits" data-tooltip>2</td>
                             <td class="source">        Object.assign(log, { request: req });</td>
                         </tr>
                         <tr class="hit">
@@ -5087,13 +5121,13 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>109</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>18</td>
+                            <td class="hits" data-tooltip>14</td>
                             <td class="source">    if (typeof entry.message &#x3D;&#x3D;&#x3D; &#x27;string&#x27;) {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>110</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>2</td>
+                            <td class="hits" data-tooltip>5</td>
                             <td class="source">        entryData.message &#x3D; entry.message;</td>
                         </tr>
                         <tr class="hit">
@@ -5105,7 +5139,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>112</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>16</td>
+                            <td class="hits" data-tooltip>9</td>
                             <td class="source">        entryData &#x3D; Object.assign(entryData, entry.message);</td>
                         </tr>
                         <tr class="hit">
@@ -5123,13 +5157,13 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>115</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>18</td>
+                            <td class="hits" data-tooltip>14</td>
                             <td class="source">    log.type &#x3D; entryData.tags[0];</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>116</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>18</td>
+                            <td class="hits" data-tooltip>14</td>
                             <td class="source">    Object.assign(log, entryData);</td>
                         </tr>
                         <tr class="hit">
@@ -5141,7 +5175,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>118</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>18</td>
+                            <td class="hits" data-tooltip>14</td>
                             <td class="source">    logString &#x3D; &#x60;${ stringify(log) }\n&#x60;;</td>
                         </tr>
                         <tr class="hit">
@@ -5159,13 +5193,13 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>121</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>18</td>
+                            <td class="hits" data-tooltip>14</td>
                             <td class="source">    if (!async) {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>122</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
+                            <td class="hits" data-tooltip>4</td>
                             <td class="source">        fs.appendFileSync(filePath, logString);</td>
                         </tr>
                         <tr class="hit">
@@ -5177,7 +5211,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>124</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
+                            <td class="hits" data-tooltip>4</td>
                             <td class="source">        return done();</td>
                         </tr>
                         <tr class="hit">
@@ -5201,13 +5235,13 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>128</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>17</td>
+                            <td class="hits" data-tooltip>10</td>
                             <td class="source">    logFile &#x3D; new GoodFile(filePath);</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>129</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>17</td>
+                            <td class="hits" data-tooltip>10</td>
                             <td class="source">    logFile.write(logString);</td>
                         </tr>
                         <tr class="hit">
@@ -5249,13 +5283,13 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>136</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>17</td>
+                            <td class="hits" data-tooltip>10</td>
                             <td class="source">    if (log.type &#x3D;&#x3D;&#x3D; &#x27;error&#x27;) {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>137</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>1</td>
+                            <td class="hits" data-tooltip>2</td>
                             <td class="source">        internals.log2console(log, log.type);</td>
                         </tr>
                         <tr class="hit">
@@ -5273,7 +5307,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>140</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>17</td>
+                            <td class="hits" data-tooltip>10</td>
                             <td class="source">    return done();</td>
                         </tr>
                         <tr class="hit">
@@ -5315,7 +5349,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>147</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>12</td>
+                            <td class="hits" data-tooltip>5</td>
                             <td class="source">        return data;</td>
                         </tr>
                         <tr class="hit">
@@ -5429,25 +5463,25 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>166</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>7</td>
+                            <td class="hits" data-tooltip>8</td>
                             <td class="source">    let rem;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>167</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>7</td>
+                            <td class="hits" data-tooltip>8</td>
                             <td class="source">    let padStr;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>168</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>7</td>
+                            <td class="hits" data-tooltip>8</td>
                             <td class="source">    let count;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>169</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>7</td>
+                            <td class="hits" data-tooltip>8</td>
                             <td class="source">    const addPad &#x3D; (str, pad &#x3D; 48) &#x3D;&gt; {</td>
                         </tr>
                         <tr class="hit">
@@ -5465,7 +5499,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>172</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>14</td>
+                            <td class="hits" data-tooltip>16</td>
                             <td class="source">        padStr &#x3D; &#x60; ${ str } &#x60;;</td>
                         </tr>
                         <tr class="hit">
@@ -5477,25 +5511,25 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>174</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>14</td>
+                            <td class="hits" data-tooltip>16</td>
                             <td class="source">        count &#x3D; 0;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>175</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>14</td>
+                            <td class="hits" data-tooltip>16</td>
                             <td class="source">        while (count &lt; rem) {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>176</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>294</td>
+                            <td class="hits" data-tooltip>336</td>
                             <td class="source">            padStr &#x3D; &#x60;&#x3D;${ padStr }&#x60;;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>177</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>294</td>
+                            <td class="hits" data-tooltip>336</td>
                             <td class="source">            count++;</td>
                         </tr>
                         <tr class="hit">
@@ -5513,25 +5547,25 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>180</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>14</td>
+                            <td class="hits" data-tooltip>16</td>
                             <td class="source">        count &#x3D; 0;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>181</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>14</td>
+                            <td class="hits" data-tooltip>16</td>
                             <td class="source">        while (count &lt; rem) {</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>182</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>294</td>
+                            <td class="hits" data-tooltip>336</td>
                             <td class="source">            padStr &#x3D; &#x60;${ padStr }&#x3D;&#x60;;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>183</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>294</td>
+                            <td class="hits" data-tooltip>336</td>
                             <td class="source">            count++;</td>
                         </tr>
                         <tr class="hit">
@@ -5549,7 +5583,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>186</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>14</td>
+                            <td class="hits" data-tooltip>16</td>
                             <td class="source">        padStr &#x3D; (padStr.length &gt; (pad + 2)) ? padStr.slice(0, -1) : padStr;</td>
                         </tr>
                         <tr class="hit">
@@ -5561,7 +5595,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>188</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>14</td>
+                            <td class="hits" data-tooltip>16</td>
                             <td class="source">        return &#x60; ${ padStr } &#x60;;</td>
                         </tr>
                         <tr class="hit">
@@ -5573,7 +5607,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>190</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>7</td>
+                            <td class="hits" data-tooltip>8</td>
                             <td class="source">    const done &#x3D; callback || hoek.ignore;</td>
                         </tr>
                         <tr class="hit">
@@ -5585,7 +5619,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>192</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>7</td>
+                            <td class="hits" data-tooltip>8</td>
                             <td class="source">    switch (type.toLowerCase()) {</td>
                         </tr>
                         <tr class="hit">
@@ -5597,13 +5631,13 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>194</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>4</td>
+                            <td class="hits" data-tooltip>5</td>
                             <td class="source">            bg &#x3D; &#x27;bgRed&#x27;;</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>195</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>4</td>
+                            <td class="hits" data-tooltip>5</td>
                             <td class="source">            break;</td>
                         </tr>
                         <tr class="hit">
@@ -5681,31 +5715,31 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>208</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>7</td>
+                            <td class="hits" data-tooltip>8</td>
                             <td class="source">    console.log(&#x27;&#x27;);</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>209</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>7</td>
+                            <td class="hits" data-tooltip>8</td>
                             <td class="source">    console.log(chalk[bg].bold.white(addPad(type)));</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>210</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>7</td>
+                            <td class="hits" data-tooltip>8</td>
                             <td class="source">    console.log(prettyjson.render(data));</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>211</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>7</td>
+                            <td class="hits" data-tooltip>8</td>
                             <td class="source">    console.log(chalk[bg].bold.white(addPad(&#x60;end ${ type }&#x60;)));</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>212</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>7</td>
+                            <td class="hits" data-tooltip>8</td>
                             <td class="source">    console.log(&#x27;&#x27;);</td>
                         </tr>
                         <tr class="hit">
@@ -5717,7 +5751,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>214</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>7</td>
+                            <td class="hits" data-tooltip>8</td>
                             <td class="source">    return done();</td>
                         </tr>
                         <tr class="hit">
@@ -6245,13 +6279,13 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>302</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>9</td>
+                            <td class="hits" data-tooltip>2</td>
                             <td class="source">        const data &#x3D; internals.error(event.data);</td>
                         </tr>
                         <tr class="hit">
                             <td class="line" data-tooltip>303</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>9</td>
+                            <td class="hits" data-tooltip>2</td>
                             <td class="source">        const entry &#x3D; {</td>
                         </tr>
                         <tr class="hit">
@@ -6305,7 +6339,7 @@
                         <tr class="hit">
                             <td class="line" data-tooltip>312</td>
                             <td class="lint empty"></td>
-                            <td class="hits" data-tooltip>9</td>
+                            <td class="hits" data-tooltip>2</td>
                             <td class="source">        log(entry, {}, request);</td>
                         </tr>
                         <tr class="hit">

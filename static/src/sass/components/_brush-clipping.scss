@@ -1,0 +1,39 @@
+//
+// Brush Clipping Component
+// holds all styles for the brush effect on the backgrounds
+// -----------------------------------------------------------------------------------
+
+// Brush svgs map
+$brushes: (
+  brush-down: '#{map-deep-get($path, svg)}/body.brush-down',
+  brush-up: '#{map-deep-get($path, svg)}/body.brush-up'
+);
+
+// Brush effect position
+$brush-position: (
+  top: '100 0 0 0',
+  bottom: '0 0 106 0'
+);
+
+// Da mixin
+@mixin brushFX ($brush-style, $position) {
+  -webkit-mask-box-image: url('#{map-deep-get($brushes, $brush-style)}.svg') #{map-deep-get($brush-position, $position)} stretch; // repeat
+  mask-border: url('#{map-deep-get($brushes, $brush-style)}.svg') #{map-deep-get($brush-position, $position)} stretch; // repeat
+};
+
+// Classes
+.brush-down-top {
+  @include brushFX('brush-down', 'top');
+}
+
+.brush-down-bottom {
+  @include brushFX('brush-down', 'bottom');
+}
+
+.brush-up-top {
+  @include brushFX('brush-up', 'top');
+}
+
+.brush-up-bottom {
+  @include brushFX('brush-up', 'bottom');
+}

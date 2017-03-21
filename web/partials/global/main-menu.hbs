@@ -1,0 +1,17 @@
+<nav class="main-menu {{ _class }}">
+    <h1 class="main-logo mm-item hidden-xlarge-down">
+        <a href="/"><img src="{{ assetsPath }}/img/global/main-logo.svg" class="img-responsive" alt="{{ appName }}"></a>
+    </h1>
+    <div class="mm-wrap">
+        <a class="mm-item" href="/tours/">Our Tours</a>
+        <a class="mm-item" href="/about-us/">About Us</a>
+        <a class="mm-item" href="/cruise-passengers/">Cruise Passangers</a>
+        {{!-- <a class="mm-item" href="/day-pass/">Day Pass</a>
+        <a class="mm-item" href="/specials/">Specials</a> --}}
+        <a class="mm-item" href="/contact-us/">Contact Us</a>
+        <a class="mm-item search hidden-xlarge-up" href="/search/">Search tour</a>
+    </div>
+    {{#if _class}}
+        <div id="js-cart-desktop" class="mm-item hidden-xlarge-down"></div>
+    {{/if}}
+</nav>

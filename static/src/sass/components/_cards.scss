@@ -1,0 +1,59 @@
+/*
+// Cards Component
+// ------------------------------------------------ */
+
+//==== Base ====//
+  [class^="card-"],
+  [class*=" card-"] {
+    position: relative;
+    transition: all 0.3s;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      content: '';
+    }
+    &::before { transform: rotate(-1deg); }
+    &::after {
+      background: #fff;
+      transform: rotate(.5deg);
+      box-shadow: 0 0 5px 1px rgba(0,0,0,.1);
+    }
+    &.no-rotate {
+      &::before,
+      &::after {
+        box-shadow: none;
+        transform: rotate(0);
+      }
+    }
+  }
+
+//==== Alternate Variants ====//
+  .card-white-transparent {
+    &::after {
+      background: rgba(255,255,255,.5);
+    }
+  }
+  .card-white-green {
+    &::before {
+      background: color(green, lighter-1);
+    }
+  }
+  .card-white-blue {
+    &::before {
+      background: color(blue);
+    }
+  }
+  .card-white-orange {
+    &::before {
+      background: color(orange);
+    }
+  }
+  .card-white {
+    background: #fff;
+  }

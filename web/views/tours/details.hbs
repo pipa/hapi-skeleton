@@ -1,0 +1,11 @@
+<div class="vw-tour">
+    {{> global/gen-header title=tour.name }}
+    <section id="js-tour-det"></section>
+    {{> global/gen-footer-cruise }}
+</div>
+
+<script>
+    _app.addData({ tour: {{{ json tour }}}, tours: {{{ json tours }}} })
+    _app.addView = 'tours/details.js';
+</script>
+{{!-- {{ debug tour }} --}}
