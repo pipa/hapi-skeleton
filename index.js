@@ -18,7 +18,7 @@ Server.init(Config.get('/manifest'), internals.options, (err, server) => {
     if (err) {
         server.log(['error', 'app', 'start'], {
             message: `${ appName } could not be started`,
-            err
+            error: err
         });
 
         return false;
@@ -29,11 +29,13 @@ Server.init(Config.get('/manifest'), internals.options, (err, server) => {
     };
 
     //== Logging start server
-    server.log(['app', 'start'], {
+    server.log(['info', 'app', 'start'], {
         message: `${ appName } server started`,
-        port: server.info.port,
-        protocol: server.info.protocol,
-        uri: server.info.uri,
-        address: server.info.address
+        data: {
+            port: server.info.port,
+            protocol: server.info.protocol,
+            uri: server.info.uri,
+            address: server.info.address
+        }
     });
 });
