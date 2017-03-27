@@ -1,11 +1,10 @@
 // Deps =========================================
-import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Validation from 'react-validation';
 import Rules from 'validationRules';
+import pubsub from './libs/pubsub.js';
 import 'whatwg-fetch';
-import './libs/pubsub.js';
 
 // Adding Custom Rules ==========================
 Object.assign(Validation.rules, Rules);
@@ -20,13 +19,13 @@ React.Component.prototype._bind = function _bind(...methods) {
 };
 
 // Setting Global Vars ==========================
-Object.assign(window, { React, ReactDOM, $, jQuery: $, Validation });
+Object.assign(window, { React, ReactDOM, Validation, pubsub });
 
 // Modules ======================================
 import runGlobal from './modules/global';
 
 // Kickstart app ================================
-$(() => {
+(() => {
 
     runGlobal();
-});
+})();

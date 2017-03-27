@@ -3,7 +3,7 @@
 // Load Modules =================================
 const minifyHTML = require('html-minifier').minify;
 const Handlebars = require('handlebars');
-const Config = require('getconfig');
+const Config = require('~/config');
 
 // Declare internals ============================
 const internals = {
@@ -34,7 +34,7 @@ module.exports = function (options) {
 
     options = Object.assign(options, options.hash || {});
 
-    if (!('isDev' in Config.getconfig)) {
+    if (Config.get('/dev') !== 'dev') {
         options = Object.assign(options, {
             minifyJS: true,
             removeComments: true,

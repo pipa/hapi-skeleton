@@ -1,5 +1,5 @@
 // Deps =========================================
-import $ from 'jquery';
+// import $ from 'jquery';
 import React from 'react';
 
 // Internal =====================================
@@ -23,14 +23,14 @@ export default class CartBtn extends Component {
         }
 
         //== Subscribing to Cart's data methods
-        $.subscribe('cart.update', this.updateCart.bind(this));
+        // $.subscribe('cart.update', this.updateCart.bind(this));
 
         this._bind('handleClick');
     }
 
     handleClick() {
 
-        $.publish('cart.show');
+        // $.publish('cart.show');
 
         return false;
     }

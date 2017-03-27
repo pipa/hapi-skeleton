@@ -21,7 +21,7 @@
                 <img src="{{ assetsPath }}/img/home/intro.img-dolphin-1.jpg" alt="">
             </div>
             <div class="xs-12 lg-6 lg-offset-1 xl-7 xl-offset-0">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+                <p>The sight of dry land after a long cruise is always welcome; and the fact that cruise passengers are only afforded a mere few hours at each docking point, makes time spent off the boat even more valuable. This is why <a href="/about-us/">Roatan Excursions</a> offers guests <a href="/tours/">tours</a> with an opportunity to forget their sea legs for a bit by instantly transporting them to a number of relaxing and engaging locations, safe in the knowledge that no precious time will be wasted.</p>
 
                 <aside class="social">
                     <span class="ib">SHARE:</span>
@@ -38,5 +38,5 @@
 
 <script>
     _app.addData({ ports: {{{ json data.ports }}}, cruiseLines: {{{ json data.cruiseLines }}} });
-    _app.addView = 'cruises/index.js';
+    _app.addScript('cruises/index.js');
 </script>

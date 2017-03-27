@@ -29,7 +29,9 @@
             <div class="xs-12 lg-6 lg-offset-1 xl-7 xl-offset-0">
                 <h4>Welcome To Roatan Excursions</h4>
                 <hr class="hidden-large-up">
-                <p>Tucked away in the Caribbean lies Roatan, the largest of the Bay Islands, and one of the world's best kept secrets. Privileged by its location along the Mesoamerican Reef, this 77km-long island is known for its beautiful white-sand beaches, turquoise waters, breathtaking sunsets, and to divers from all over the world who come to explore the treasures buried beneath the waves.</p>
+                {{!-- <p>Tucked away in the Caribbean lies Roatan, the largest of the Bay Islands, and one of the world's best kept secrets. Privileged by its location along the Mesoamerican Reef, this 77km-long island is known for its beautiful white-sand beaches, turquoise waters, breathtaking sunsets, and to divers from all over the world who come to explore the treasures buried beneath the waves.</p> --}}
+                <p>Discover a different world with island activities for <a href="/cruise-passengers/">cruise ship passangers</a> &amp; adventure seekers. With the best tours in canopy zipline, dolphins encounter, scuba, . At <a href="/about-us/">Roatan Excursions</a>, we really move our tail for you.</p>
+                <p>Wether you are looking for adventure, fun or a relaxing time, we have the perfect <a href="/tours/">tour</a> for you.</p>
 
                 {{> global/social-share}}
             </div>
@@ -50,7 +52,8 @@
             <div class="row roa-map">
                 <h2 class="xs-12">Roatan</h2>
                 <h6 class="xs-12">WEST BAY BEACH - HONDURAS</h6>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+                <p>Located between the islands of &Uacute;tila and Guanaja, Roatan is the largest of Honduras' Bay Islands while only being around 48 miles (77 kilometres) long and less than 5 miles (8 km) across at its widest point. Fortunately, given that it is surrounded by translucent waters teaming with marine life — including Roatan Marine Park — and a huge array of fun-filled island activities for the whole family, Roatan caters to all comers, making Roatan Cruise Port an ideal docking point for <a href="/cruise-passengers/">cruise ships</a>.</p>
+                <p>Our fleet of four Roatan diving boats are ready and waiting to take you to any one of Roatan's fascinating dive spots, each bursting with vibrant aquatic wildlife. <a href="/about-us/">Roatan Excursions</a> dive masters are fully trained and professional to ensure all guests are 100% safe for the entire trip, with each group holding a maximum of eight divers so there is no need to worry about overcrowding.</p>
                 <div class="map">
                     <img src="{{ assetsPath }}/img/home/map.img-roatan.png" class="img-responsive" alt="">
                 </div>
@@ -61,5 +64,5 @@
 
 <script>
     _app.addData({ tours: {{{ json data }}} });
-    _app.addView = 'main/home.js';
+    _app.addScript('main/home.js');
 </script>

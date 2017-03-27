@@ -2,6 +2,7 @@
 import CartBtn from '../components/cart/Button.js';
 import CartDDL from '../components/cart/DDL.js';
 import Subscribe from '../components/global/Subscribe.js';
+import _ from 'utils';
 
 // Local scope ==============================
 const internals = {
@@ -36,11 +37,11 @@ internals.generalBindings = () => {
     const { $html, $mmTrigger, _class } = internals;
 
     //== Trigger no-scroll to html when Menu visible
-    $mmTrigger.on('change', () => {
+    $mmTrigger.addEventListener('change', () => {
 
-        $html.removeClass(_class.noScroll);
-        if ($mmTrigger.prop('checked')) {
-            $html.addClass(_class.noScroll);
+        _.removeClass($html, _class.noScroll);
+        if ($mmTrigger.hasAttribute('checked')) {
+            _.addClass($html, _class.noScroll);
         }
     });
 };
@@ -80,8 +81,8 @@ export default () => {
 
     const { thirdParty, generalBindings, initJSX } = internals;
 
-    internals.$mmTrigger = $('#menu-state');
-    internals.$html = $('html');
+    internals.$mmTrigger = document.getElementById('menu-state');
+    internals.$html = document.getElementsByTagName('html')[0];
 
     if (_app.env !== 'dev') {
         thirdParty();

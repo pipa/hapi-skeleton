@@ -1,5 +1,5 @@
 // Deps =========================================
-import $ from 'jquery';
+// import $ from 'jquery';
 import React from 'react';
 import _ from 'utils';
 
@@ -27,15 +27,15 @@ export default class CartDDL extends Component {
         this._bind('showCart', 'hideCart');
 
         //== Subscribing to Cart's data methods
-        $.subscribe('cart.show', this.showCart);
+        // $.subscribe('cart.show', this.showCart);
     }
 
     showCart(e, items = _.getLocalStorageCart()) {
 
         this.setState({ items, visible: true });
-        $('html, body').animate({
-            scrollTop: 0
-        });
+        // $('html, body').animate({
+        //     scrollTop: 0
+        // });
     }
 
     hideCart() {

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 {{#minify}}
 <html lang="en">
-    {{> global/html-head}}
+    {{> layout/html-head}}
     <body>
-        {{> global/header}}
+        {{> layout/header}}
         <main id="main" role="main">
             {{{ content }}}
         </main>
-        {{> global/footer}}
-        {{> global/js}}
+        {{> layout/footer}}
     </body>
 </html>
 {{/minify}}
